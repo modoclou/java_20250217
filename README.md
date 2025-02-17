@@ -1,4 +1,4 @@
 #### 1. 2025-02-17
   1. WELCOME!
   2. git (로컬저장소 · 원격저장소)
-     java (설치, eclipse)
+  3. java (설치, eclipse)
