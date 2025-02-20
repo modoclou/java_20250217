@@ -14,7 +14,7 @@ public class CastingEx002 {
 		total = kor + eng + math;
 		avg = total/3.0;	//(double)total/3;	total/(double)3;	(double)total/(double)3;
 		lev = (int)avg/10;
-		System.out.printf(":: GOOD  IT SCORE ::\n 국어 : %d \n 영어 : %d \n 수학 : %d \n 총점 : %d \n 총점 : %.2f \n 레벨: %d ", kor, eng, math, total, avg, lev);
+		System.out.printf(":: GOOD  IT SCORE ::\n 국어 : %d \n 영어 : %d \n 수학 : %d \n 총점 : %d \n 평균 : %.2f \n 레벨: %d ", kor, eng, math, total, avg, lev);
 //		System.out.printf("%d\t%d\t%d\t%d\t%.2f\t%d\t", kor, eng, math, total, avg, lev);
 //		String.format("%.2f", avg)+ "/t"+level
 	}
