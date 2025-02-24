@@ -26,3 +26,12 @@
   5. for(;;) // 무한반복
   6. java005.Repeat_005 복습
   7. bank mini project ~Step2
+
+#### 6. 2025-02-24
+  1. for 복습, (for)while, do wile, array 실습(for+length-배열-로 출력)
+  2. 14. array 배열
+     - 배열?
+     - [같은 타입]의 데이터를 [연속된 공간에 저장]하는 자료구조
+     - 각 데이터의 저장 위치는 [인덱스]를 통해서 접근
+  3. int, char, String(...)[] arr
+  4. String 배열("다문자", "다문자1", "다문자2") / ch 배열(한 글자 문자)에서 a의 갯수 세기
