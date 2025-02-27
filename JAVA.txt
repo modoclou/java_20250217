@@ -641,3 +641,44 @@ int [] arr = {1, 2, 3};
     1. 배열명 : ch
     2. 값 넣기 : 'B' , 'a' , 'n' , 'a', 'n' , 'a'
     3. ch 배열에서 대문자의 갯수카운트, 소문자의 갯수 카운트
+
+
+
+1) 클래스명 : Repeat001
+문자를 한개 입력받아
+if ver - 가   'j'이면  java,  'h'이면   html,   'c'이면 css
+
+2) 클래스명 : Repeat002
+문자를 한개입력받아
+switfh ver-   'j'이면  java,  'h'이면   html,   'c'이면 css
+
+
+3) 클래스명 : Repeat003
+for, while, do while 3가지 버젼으로    100 200 300  출력
+
+
+4) 클래스명 : Repeat004
+0. new를 이용하여 다음과 배열을 작성한다.
+1. 배열명 : arr
+2. 값     : a  b   c
+3. for + length 를 이용하여  배열안의 a,b,c을 출력하시오.
+
+5) 클래스명 : Repeat005
+0. new를 이용하여 다음과 배열을 작성한다.
+1. 배열명 : arr2
+2. 값     :  {a,b,c}, {d,e,f}
+3. for + length 를 이용하여  배열안의 값을을 출력하시오.
+
+6) 다음에 알맞은 코드를 작성하시오. 
+-1) ONE   버튼을 클릭하면 본인이름 알림창 띄우기   (onclick 이용!)
+ <button  class="btn btn-warning my-3"  > ONE </button>
+ 
+-2) TWO   버튼을 클릭하면 본인이름 알림창 띄우기   (document.getElementById 이용!)
+ <button  class="btn btn-warning my-3" id="two" > TWO </button>
+ 
+ 7) 다음의 메서드를 정의 하시오.
+ 
+public static void main(String[] args){
+    hi();   // hi 출력
+    hi(1);   // hi 1 님! 출력
+    System.out.println( hi("sally") );   // hi sally 출력
