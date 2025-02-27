@@ -20,6 +20,73 @@ part3) oop 활용
    - collection ( ArrayList ) ,  Thread , lambda + Stream / io / network
 
 
+● 1. CLASS?
+1. 자바 저장단위
+- 변수 < 배열 < 클래스
+
+2. 클래스(CLASS)
+- 객체의 특징  예) 자동차
+- 부품객체
+- 상태(멤버변수)와                   행위(멤버함수)를 갖는다
+  예) 바퀴 클래스, 엔진 클래스 + 드라이브, 후진, 파킹
+
+3. OOP? ★
+- 객체               지향      프로그래밍
+- Object          Oriented Programming
+-   틀                기반       프로그램
+- 부품객체(클래스) 조립  완성된 프로그램을 만드는 기법
+
+4. 클래스와 인스턴스
+- 1. 클래스(설계도)틀로   예) 붕어빵틀
+- 2.             인스턴스화를 통해(new 실제 메모리로-heap에 객체 만들기)
+- 3.                         여러 개의 객체(인스턴스)를 만들기
+                                        예) 객체(Object) - 붕어빵들
+                                             인스턴스     - 팥붕어빵, 슈크림 붕어빵, 각각...
+
+> 클래스는 설계도
+> 인스턴스는 실제로 만들어진 객체
+
+연습문제1)  class
+패키지명 : com.company.java009_ex
+클래스명 :  ClassEx001
+class Student001{
+  멤버변수 : String name;  int no, kor, eng, math;
+  멤버함수 : void info()
+}
+
+public class ClassEx001{
+   public static void main(String[] args) {
+      Student001   s1 = new Student003();
+     s1.name="first";  s1.no=11; s1.kor=100; s1.eng=100; s1.math=99;
+     s1.info();
+   }
+}
+출력내용 : 
+  이름: first
+  총점 : 299
+  평균 : 99.67
+
+연습문제2)  class
+패키지명 : com.company.java009_ex
+클래스명 :  ClassEx002
+class MyPrice001{
+  멤버변수 : String name;  int price;
+  멤버함수 : void input()  입력받는 기능 / void show()  출력해주는 기능
+}
+public class ClassEx002{
+   public static void main(String[] args) {
+        MyPrice001   p1 = new MyPrice001();
+        p1.input();
+        p1.show();
+   }
+}
+출력내용 : 
+  상품이름 입력 >  apple
+  상품가격 출력 >  1500
+
+  상품정보입니다
+  상품이름 : apple  / 상품가격 : 1500
+
 
 ■3. 설치  (1)   java
 1) java.sun.com 다운로드받아서 설치
