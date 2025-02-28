@@ -6,6 +6,7 @@ public class Method003 {
 	public static    int    num(){  return  (int)(Math.random()*45); } //0~0.9999
 	////////////////////////////////////////////
 	public static void main(String[] args) {
+		
 		// public static 리턴값 메서드명(파라미터) {}
 		// public static sally   sign(      ) { return "sally"; }
 		// public static String   sign(      ) { return "sally"; }

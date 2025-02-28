@@ -29,12 +29,12 @@ public class Method004_ex {
 		String result="";
 		//70점대이면 별7개, 80점대이면 별8개, 90점대이면 별9개 , 100점이면 별10개 
 		// 92/10 = 9   100/10 = 10  83/10=8
-		for(int i=0; i< (int)avg/10;i++){result +="★"; }
+		for(int i=0; i<(int)avg/10; i++){result +="★"; }
 		return result;   // repeat
 	}
 	
 	//6
-	public static void process_show(String name,int kor,int eng,int math,int total, 
+	public static void process_show(String name, int kor, int eng, int math, int total, 
 			float avg, String pass, String jang, String star){  
 		
 		System.out.println("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: \r\n"

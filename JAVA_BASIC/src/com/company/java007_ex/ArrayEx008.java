@@ -26,7 +26,9 @@ public class ArrayEx008 {
 	    //ver-2    if(아이언맨의 평균이  60점이상이면){ 합격}{ 아니면 불합격}
 	    //ver-3    if(aver[0]>=60){ pass[0] = "합격";}{ pass[0] = "불합격";}
 	    
-	    for(int i=0; i<name.length; i++) {   if(aver[i]>=60){ pass[i] = "합격";}else{ pass[i] = "불합격";}  }
+	    for(int i=0; i<name.length; i++) {   
+	    	if(aver[i]>=60){ pass[i] = "합격";}
+	    	else{ pass[i] = "불합격";}  }
 	    
 	    //3. 장학생   - 평균 95점이상이면 장학생으로 처리하시오. 
 	    //ver-1   아이언맨의 평균이 95점이상이면 장학생 / ---- 

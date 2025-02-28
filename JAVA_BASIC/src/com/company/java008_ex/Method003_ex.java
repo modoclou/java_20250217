@@ -12,6 +12,7 @@ public class Method003_ex {
 		//public static 리턴값 메서드명(재료){   }
 		//public static 1    return_num(){  return  1을 결과값으로 줌   }
 		//public static int  return_num(){  return  1;  }
+		
  		System.out.println("2. 10/3.0을 실수로 표현 :" + return_float());  // 3.3333을 결과값으로 줌
  		//public static 리턴값   메서드명(재료){   }
  		//public static 3.3333 return_float(){ return 3.3333을 결과값으로    }
@@ -31,14 +32,12 @@ public class Method003_ex {
  		//public static 리턴값     메서드명(재료){   }
  		//public static 30        myadd(10,20){  두숫자를 더한값을 결과값 } 
  		//public static int       myadd(int a,int b){  return a+b; } 
- 		
- 		
+ 		 		
  		System.out.println("6. 반(노랑조/주황조)=" + myban('B'));  // A이면 노랑조 ,  B이면 주황조
  		//public static 리턴값     메서드명(재료){   }
  		//public static 노랑조    myban('B'){  A이면 노랑조 ,  B이면 주황조  }
  		//public static String   myban(char a){  if(A이면){ 노랑조} else if(B이면){ 주황조}  }
- 		
- 		
+ 		 		
  		System.out.println("7. 당신의 학번은?" + stdId(1111));   // G하고 넣어준 학번 나오게
  		//public static 리턴값     메서드명(재료){   }
  		//public static G1111     stdId(1111 ){   return "G"+1111; }
