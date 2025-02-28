@@ -6,6 +6,7 @@ public class Method005_ex {
 	public static int  add(byte x, byte y)   {return x+y;}  //1
 	public static int  add(short x, short y) {return x+y;}  //2
 	//public static long add(int  x, int y)    {return x+y;}  //3
+	//Duplicate method add(int, int) in type Method005_ex
 	public static long add(long  x, long y)  {return x+y;}  //4
 	
 	
