@@ -2,6 +2,9 @@ package com.company.java006_ex;
 
 public class ArrayEx004 {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 7efdcda83772e6541eb8f6835f99453a3a9fa1ff
 	public static void main(String[] args) {
 	   char[] ch= {'B' , 'a' , 'n' , 'a', 'n' , 'a'};
 	   int cnt=0;
@@ -31,6 +34,7 @@ public class ArrayEx004 {
     1. 배열명 : ch
     2. 값 넣기 : 'B' , 'a' , 'n' , 'a', 'n' , 'a'
     3. ch 배열에서 a의 갯수 세기
+<<<<<<< HEAD
 */
 =======
 	public static void main(String [] args) {
@@ -59,3 +63,6 @@ public class ArrayEx004 {
 	}
 }
 >>>>>>> origin/2
+=======
+*/
+>>>>>>> 7efdcda83772e6541eb8f6835f99453a3a9fa1ff

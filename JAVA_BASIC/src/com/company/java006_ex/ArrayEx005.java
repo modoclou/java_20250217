@@ -2,6 +2,9 @@ package com.company.java006_ex;
 
 public class ArrayEx005 {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 7efdcda83772e6541eb8f6835f99453a3a9fa1ff
 	public static void main(String[] args) {
 		char [] ch = {'B' , 'a' , 'n' , 'a', 'n' , 'a'};
 		int  upper=0, lower=0;
@@ -31,6 +34,7 @@ public class ArrayEx005 {
     2. 값 넣기 : 'B' , 'a' , 'n' , 'a', 'n' , 'a'
     3. ch 배열에서 대문자의 갯수카운트, 소문자의 갯수 카운트
 
+<<<<<<< HEAD
 */
 =======
 	public static void main(String [] args) {
@@ -68,3 +72,6 @@ public class ArrayEx005 {
 	}
 }
 >>>>>>> origin/2
+=======
+*/
+>>>>>>> 7efdcda83772e6541eb8f6835f99453a3a9fa1ff

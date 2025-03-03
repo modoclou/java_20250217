@@ -2,6 +2,9 @@ package com.company.java006;
 
 public class Arr001 {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 7efdcda83772e6541eb8f6835f99453a3a9fa1ff
 	public static void main(String[] args) {
 		
 		int[] arr  = null;  //int자료형 [] 연달아서 입력받을께요~!
@@ -54,6 +57,7 @@ public class Arr001 {
 
 
 
+<<<<<<< HEAD
 =======
 	public static void main(String [] args) {
 		int[] arr = null; //int 자료형 [] 연달아서 값을 입력받는다
@@ -93,3 +97,5 @@ public class Arr001 {
 	}
 }
 >>>>>>> origin/2
+=======
+>>>>>>> 7efdcda83772e6541eb8f6835f99453a3a9fa1ff

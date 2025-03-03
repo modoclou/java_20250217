@@ -2,6 +2,9 @@ package com.company.java006;
 
 public class Repeat002_while_dowhile {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 7efdcda83772e6541eb8f6835f99453a3a9fa1ff
 	public static void main(String[] args) {
 		//1. for  ( 반복횟수를 알때 ) 
 		//   1   2   3   {반복}  {변수} for(시작; 종료; 변화)
@@ -15,6 +18,7 @@ public class Repeat002_while_dowhile {
 		
 	}// end main
 }// end class
+<<<<<<< HEAD
 =======
 	public static void main(String [] args) {
 		//1. for(반복횟수를 알 때)
@@ -29,3 +33,5 @@ public class Repeat002_while_dowhile {
 	}
 }
 >>>>>>> origin/2
+=======
+>>>>>>> 7efdcda83772e6541eb8f6835f99453a3a9fa1ff
