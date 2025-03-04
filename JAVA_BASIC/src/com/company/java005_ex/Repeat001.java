@@ -1,28 +1,20 @@
 package com.company.java005_ex;
 
+import java.util.Scanner;
+
 public class Repeat001 {
 	public static void main(String [] args) {
-		//step1
-		System.out.println("step1 ) ");
-		System.out.print(1+"\t");	//{}    시작1
-		System.out.print(2+"\t");	//{변수} 증감1
-		System.out.print(3+"\t");	//{}    종료3
+		//변수
+		Scanner sc = new Scanner(System.in);
+		int a= ' ';
 		
-		//step2
-		System.out.println("\n\nstep2 ) ");
-		//{반복} {변수} for(시작;종료;변화)
-		for(int i=1; i<=3; i++)
-		{ System.out.print(i+"\t"); }	
+		//입력
+		System.out.print("좋아하는 숫자를 입력하세요. > ");	a = sc.nextInt();
 		
-		//step3
-		for(int i=11; i<=20; i++)   //11~20
-		{ System.out.print(i+"\t"); }	
+		//처리
+		System.out.println("a는 " + a + "입니다.");
+		//출력
+		//
 		
-		for(int i=3; i<=8; i++)   //3~8
-		{ System.out.print(i+"\t"); }	
-		
-		for(int i=1; i<=10; i++)   //3~8
-		{ System.out.print(i+"\t"); }
-		
-	}//end main
-}// end class
+	}
+}
