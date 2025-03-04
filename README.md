@@ -52,3 +52,9 @@
   5. public static int add(int x, int y) / public static long add(int x, int y) - 자료형이 다르면 method overloading error, different paremeter
   6. for(int a=0; int<ch.length; i++){} / for(int i=0; int<arr[i].length; i++){}
   7. 3-3 임시공휴일(3.1절)
+
+
+#### 9. 2025-03-04
+  1. OOP Static, Final, Modifier(접근제어자), Class Arr
+  2. 클래스 배열
+  3. getter/setter, field, super, toString
