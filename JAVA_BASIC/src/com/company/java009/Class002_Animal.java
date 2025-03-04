@@ -2,7 +2,7 @@ package com.company.java009;
 
 //1. 클래스는 부품객체
 //2. 클래스는 속성(멤버변수)과 행위(멤버함수)
-class Animal002{
+class Animal0021{
 	//속성-멤버변수
 	String name; int age;
 	//행위-멤버함수
@@ -10,9 +10,9 @@ class Animal002{
 }
 public class Class002_Animal {
 	public static void main(String[] args) {
-		Animal002 a1 = new Animal002(); a1.name="sally";   a1.show();  
+		Animal0021 a1 = new Animal0021(); a1.name="sally";   a1.show();  
 		//1. new(공간,객체생성) 2. Animal002() 초기화 3. a1 주소 = 1번지
-		Animal002 a2 = new Animal002(); a2.name="alpha";   a2.show();  
+		Animal0021 a2 = new Animal0021(); a2.name="alpha";   a2.show();  
 		//1. new(공간,객체생성) 2. Animal002() 초기화 3. a2 주소 = 2번지
 	}
 }  // 인스턴스?  a1 , a2  -  this.name
