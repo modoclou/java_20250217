@@ -16,11 +16,7 @@ public class ForEx006_1 {
 		for(;;) {  //무한반복
 			System.out.print("숫자2 입력>"); num2 = scanner.nextInt();
 			// 잘썼으면 나와!  if(num2이 0~100사이라면 ){ break}
-<<<<<<< HEAD
-			if(num2>=0 && num2<=100) { break; }   
-=======
 			if(num2>=0 && num2<=100) { break; }
->>>>>>> 7efdcda83772e6541eb8f6835f99453a3a9fa1ff
 		}
 		for(;;) {  //무한반복
 			System.out.print("연산자 입력>");   op = scanner.next().charAt(0);

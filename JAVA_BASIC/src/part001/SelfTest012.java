@@ -8,12 +8,12 @@ while
  * 만약 1~100사이를 입력하면 빠져나오기	
 **/
 
-public class SeltTest012 {
+public class SelfTest012 {
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
 		int num;
-		System.out.print("1~100 사이를 입력하세요. > ");		num = sc.nextInt();
-		while(num>=1 && num<=100) { ;;
+		Scanner sc = new Scanner(System.in);
+		while(true) {
+			System.out.print("1~100 사이를 입력하세요. > ");		num = sc.nextInt();
 			if(num>=1 && num<=100) { break; }
 		}
 	}
