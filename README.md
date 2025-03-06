@@ -44,7 +44,7 @@
   2. Array로 성적 평균, for 반복문(int i) 단계별ver 수식 작성 실습(~DAY006)
   3. 2차원배열, 이중 for문(~DAY007 10%)
 
-#### 9. 2025-02-28
+#### 10. 2025-02-28
   1. array 다차원 배열(이중 for문, 2차원 배열) / Arrays.toString(arr), Arrays.deeptoString(arr)
   2. public static 리턴값(void, or) 메서드명(파라미터[함수값]){} / 메서드{}; 호출(function, method, class)
   3. method 매개 변환, return문(void 없을 시 필수)
@@ -53,8 +53,15 @@
   6. for(int a=0; int<ch.length; i++){} / for(int i=0; int<arr[i].length; i++){}
   7. 3-3 임시공휴일(3.1절)
 
-
-#### 9. 2025-03-04
+#### 11. 2025-03-04
   1. OOP Static, Final, Modifier(접근제어자), Class Arr
   2. 클래스 배열
   3. getter/setter, field, super, toString
+
+#### 12. 2025-03-05
+  1. OOP extends(상속) 부모 = 자식(업캐스팅), 자식 = 부모(다운캐스팅)
+  2. getters/setters, toString, using field, superclass, 다형성
+
+#### 13. 2025-03-06
+  1. OOP(2) 
+  2. bank 마무리(합 +=, -=), 반복문 if?for로 치환해서 간단화
