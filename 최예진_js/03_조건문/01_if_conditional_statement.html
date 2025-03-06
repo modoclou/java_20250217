@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if 조건문</title>
+    <style>
+        p.syntax {
+            white-space: pre;
+        }
+    </style>
+</head>
+<body>
+    <h1>if 조건문</h1>
+    <ul>
+        <li>조건식에 0, null, ""(빈문자), undefined는 false, 나머지는 true</li>
+    </ul>
+    <hr><hr>
+
+    <h2>if</h2>
+    <p class="syntax">
+        if(조건식) {
+            참이면 실행;
+        }
+    </p>
+    <button id="walk-check1">당신이 하루에 걷는 양은?</button>
+    <script>
+        document.getElementById("walk-check1").onclick = function(){
+            let walkAround = prompt("당신이 하루에 걷는 양은?");
+            if(walkAround >= 10000) {
+                console.log("당신은 매우 좋은 습관을 가지셨네요.");
+        }
+    }
+    </script>
+
+    <hr>
+    <h2>if - else</h2>
+    <p class="syntax">
+        if(조건식) {
+            참이면 실행;
+        } else {
+            거짓이면 실행;
+        }
+    </p>
+    <button id="walk-check2">당신이 하루에 걷는 양은?</button>
+    <script>
+        document.getElementById("walk-check2").onclick = function(){
+            let walkAround = prompt("당신이 하루에 걷는 양은?");
+            /*
+             * 10000보 이상이면 "좋은 습관을 가지셨네요."
+             * 아니면 "걸으셔야죠."
+             */
+            if(walkAround >= 10000) {
+                console.log("당신은 매우 좋은 습관을 가지셨네요.");
+        } else {
+                console.log("걸으셔야죠.");
+        }
+    }
+    </script>
+
+    <hr>
+    <h2>if - else if - else</h2>
+    <p class="syntax">
+        if(조건식1) {
+            조건식1이 참이면 실행;
+        } else if(조건식2) {
+            조건식2가 참이면 실행;
+        } else {
+            거짓이면 실행;
+        }
+    </p>
+    <button id="walk-check3">당신이 하루에 걷는 양은?</button>
+    <script>
+        document.getElementById("walk-check3").onclick = function(){
+            let walkAround = prompt("당신이 하루에 걷는 양은?");
+            /*
+             * 10000보 이상이면 매우 좋은 습관이네요.
+             * 5000 이상이면 그럭저럭 괜찮아요.
+             * 5000 미만이면 걸으셔야죠.
+             */
+            if(walkAround >= 10000) {
+                console.log("당신은 매우 좋은 습관을 가지셨네요.");
+            } else if(walkAround >= 5000) {
+                console.log("그럭저럭 괜찮아요.");
+            } else {
+                console.log("걸으셔야죠.");
+        }
+    }
+    </script>
+
+    <hr>
+        <button id="cancel-chk">회원탈퇴</button>
+    <script>
+        /*
+         * [잠깐 퀴즈]
+         * 회원탈퇴 버튼을 누르면
+         * [확인] [취소] 버튼을 가진 confirm() 이 뜨고
+         * [확인] 버튼을 누르면 "탈퇴 처리되었습니다."
+         * [취소] 버튼을 누르면 "탈퇴 처리가 취소되었습니다."
+         * 
+         */
+
+        document.getElementById("cancel-chk").onclick = function(){
+            let cancelChk = confirm("정말 탈퇴하시겠습니까?");
+            console.log(cancelChk); // 출력값 체크용
+            if(cancelChk == 1) {
+                alert("탈퇴 처리되었습니다.");
+            } else {
+                alert("탈퇴 처리가 취소되었습니다.");
+            }
+        } // let 변수값을 담아 결과 출력
+    </script>
+
+    <hr>
+    <button id="grade-display">등급 출력</button>
+    <script>
+        /*
+         * "점수를 입력하세요" 라는 프롬프트 창에서 입력받은 숫자로
+         * 등급을 콘솔 창에 출력
+         * 
+         * 90점 이상 : A등급
+         * 90점 미만 80점 이상 : B등급
+         * 80점 미만 70점 이상 : C등급
+         * 70점 미만 : D등급
+         */
+
+        // document.getElementById("grade-display").onclick = function(){
+        //     let score = prompt("점수를 입력하세요");
+        //     let grade;
+
+        //     if(score >=90) {
+        //         grade = "A";
+        //     } else if (score >= 80 && score < 90) {
+        //         grade = "B";
+        //     } else if (score >= 70 && score < 80) {
+        //         grade = "C";
+        //     } else {
+        //         grade = "D";
+        //     }
+        //     console.log(`${grade} 등급입니다.`)
+        // } // console에 ${}값을 이용하여 결과 출력
+
+        document.getElementById("grade-display").onclick = function(){
+            let gradeScore = prompt("당신의 점수는 몇 점입니까?");
+            console.log(gradeScore); // 출력값 체크용
+            if(gradeScore >= 90) {
+                alert("A등급");
+            } else if(gradeScore >= 80) {
+                alert("B등급");
+            } else if(gradeScore >=70) {
+                alert("C등급");
+            } else {
+                alert("D등급");
+            }
+        }
+
+    </script>
+
+    <hr>
+    <h1>중첩 조건문</h1>
+    <p>if-else문 안에 또 다시 if-else문을 중첩할 수 있다.</p>
+    <button id="walk-check4">당신이 하루에 걷는 양은?</button>
+    <script>
+        document.getElementById("walk-check4").onclick = function(){
+            let exerciseChk = confirm("매일 운동은 하시나요?");
+            if(exerciseChk) {
+                let walkAround = prompt("하루 동안 얼마나 걸으시나요?");
+                if(walkAround >= 10000) {
+                    console.log("매우 좋은 습관이에요.");
+                } else {
+                    console.log("걷는 양을 늘려보세요.");
+                }
+            } else {
+                console.log("운동하셔야 합니다.");
+            }
+        }
+    </script>
+
+    <hr>
+    <button id="member-chk">회원 여부 판단하기</button>
+    <script>
+        /**
+         * 이름 : 홍길동
+         * 비번: 1234
+         * 
+         * 1. "이름을 입력하세요"
+         * 2. "홍길동"을 입력했으면 "비밀번호를 입력하세요"
+         *  - 비밀번호 입력창이 뜨고
+         *  - 비밀번호가 맞으면-일치하면?-"홍길동님 환영합니다."
+         *  - 비밀번호가 틀리면 "비밀번호를 확인하세요."
+         * 3. "고길동"을 입력했으면 "회원가입하세요.""
+        */
+
+        document.getElementById("member-chk").onclick = function(){
+            const memberName = "홍길동";
+            const memberPwd = 1234;
+            // 사용자 아이디 let userName
+            // 사용자 비번 let userPwd
+            let userName = prompt("이름을 입력하세요.");
+            if(userName == memberName) {
+                let userPwd = prompt("비밀번호를 입력하세요.");
+                if(userPwd == memberPwd) {
+                    alert(`"${memberName}님 환영합니다."`);
+                } else {
+                    alert("비밀번호를 확인하세요.");
+                }
+            } else {
+                alert("회원가입하세요.");
+            }
+        }
+    </script>
+</body>
+</html>

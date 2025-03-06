@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- @mediaquery 태그를 사용할 시 meta 태그를 이용하며 viewport를 지정하여야 한다. -->
+    <title>반응형 이미지 만들기</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .main{
+            display: flex;
+            justify-content: center;
+            background-color: #eee;
+            padding: 20px;
+        }
+
+        .header{
+            height: 400px;
+            background: url("images/pc_back.jpg") no-repeat center center;
+            background-size: cover;
+            max-width: 100%;
+        }
+
+        .header::before{
+            content:"귀소본능";
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: inherit;
+            font-size: 60px;
+            color: #fff;
+        }
+
+        .box-wrap{
+            width: 500px;
+            border: 5px solid orange;
+            margin: 10px;
+        }
+
+        .box-wrap img{
+            max-width: 100%;
+            display: block;
+        }
+
+        /*
+            min-width의 경우 접두어 순서가 바뀌어 작은 수부터 아래로 나열
+            max-width의 경우 수가 큰 순서대로 아래로 나열
+        */
+        
+        /* Tablet media query */
+        @media all and (max-width: 768px){
+            .main{
+                background-color: pink;
+            }
+            .box-wrap{
+                width: 300px;
+                margin: 5px;
+                border-color: thistle;
+            }
+            .header{
+            background: url("images/tablet_back.jpg") no-repeat center center;
+            background-size: cover;
+            }
+            .header::before{
+                content:"안녕하세요";
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: inherit;
+                font-size: 60px;
+                color: #fff;
+            }
+        }
+
+        /* Mobile media query */
+        @media all and (max-width: 320px){
+            .main{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .box-wrap{
+                width: 90%;
+            }
+            .header{
+            background: url("images/mobile_back.jpg") no-repeat center center;
+            background-size: cover;
+            }
+            .header::before{
+                content:"잘가시게";
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: inherit;
+                font-size: 60px;
+                color: #fff;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header class="header"></header>
+        <div class="main">
+            <div class="box-wrap">
+                <img src="images/flower.jpg" alt="">
+            </div>
+            <div class="box-wrap">
+                <img src="images/dog.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

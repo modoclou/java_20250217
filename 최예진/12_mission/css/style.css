@@ -1,0 +1,198 @@
+@charset "UTF-8";
+
+/* 초기화 */
+@import url("reset.css");
+
+/* 웹 아이콘 */
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css);
+
+/* 웹 폰트 */
+@import url('https://fonts.googleapis.com/css2?family=42dot+Sans:wght@300..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+.warp{
+    margin: auto;
+}
+
+.div1{
+    position: relative;
+    left: 50%;
+}
+
+.div2{
+    position: relative;
+    left: 30%;
+}
+
+::selection{
+    background-color: #e2e2e2;
+    overflow: auto;
+}
+
+body{
+    margin: auto;
+    width: 57em;
+    margin: 15px;
+    background-image: linear-gradient(rgb(255, 250, 247), #f0fafa);
+}
+
+h1 i{
+    margin-top: 30px;
+    text-indent: 15px;
+    font-size: 28px;
+}
+
+h1{
+    margin-top: 0px;
+    margin-bottom: 20px;
+    font: bold 28px "42dot Sans", serif;
+    letter-spacing: -0.75px;
+    line-height: 2em;
+    background-color: rgb(243, 151, 109);; 
+}
+
+.img{
+    width: 100%;
+    border: 2px solid #393939;
+    margin-bottom: 10px;
+}
+
+#materials{
+    text-indent: 15px;
+    margin: 20px 0 10px;
+    text-decoration: underline 1px solid #393939;
+    font: bold 21px "42dot Sans", serif;
+    letter-spacing: -0.75px;
+    line-height: 2em;
+    border: 1px solid rgb(137, 137, 255);
+    border-radius: 3em;
+    background-color: rgb(137, 137, 255);
+    width: 6em;
+    height: 2em;
+}
+
+#materials:hover{
+    background-color: rgb(243, 151, 109);
+    border: 1px solid rgb(243, 151, 109);
+}
+
+h2{
+    text-indent: 15px;
+    margin: 20px 0 10px;
+    text-decoration: underline 1px solid #393939;
+    font: bold 21px "42dot Sans", serif;
+    letter-spacing: -0.75px;
+    line-height: 2em;
+    border: 1px solid rgb(137, 137, 255);
+    border-radius: 3em;
+    background-color: rgb(137, 137, 255);
+    width: 7.5em;
+    height: 2em;
+}
+
+h2:hover{
+    background-color: rgb(243, 151, 109);
+    border: 1px solid rgb(243, 151, 109);
+}
+
+h3{
+    list-style: circle;
+    font: bold 21px "42dot Sans", serif;
+    letter-spacing: -0.75px;
+    line-height: 2em;
+}
+
+p{
+    text-indent: 13px;
+    font-family: "Pretendard-Regular", serif;
+    font-weight: lighter;
+    letter-spacing: -0.75px;
+    line-height: 1.6em;
+}
+
+dt{
+    font-family: "Pretendard-Regular", serif;
+    font-weight: lighter;
+    letter-spacing: -0.75px;
+    line-height: 1.6em;
+}
+
+dl{
+    border: 1px solid #393939;
+    padding: 25px;
+    width: 10em;
+}
+
+dd{
+    text-indent: 15px;
+    font-family: "Pretendard-Regular", serif;
+    font-weight: lighter;
+    letter-spacing: -0.75px;
+    line-height: 1.6em;
+}
+
+li{
+    color: black;
+    display: inline;
+    list-style: circle;
+    font-family: "Pretendard-Regular", serif;
+    font-weight: lighter;
+    letter-spacing: -0.75px;
+    line-height: 1.6em;
+    margin: auto;
+}
+
+li:hover{
+    color: black;
+    display: inline;
+    list-style: circle;
+    font-family: "Pretendard-Regular", serif;
+    font-weight: lighter;
+    letter-spacing: -0.75px;
+    line-height: 1.6em;
+    margin: auto;
+}
+
+nav, .explain-bottom{
+    margin-bottom: 30px;
+}
+
+ol{
+    border: 1px solid #393939;
+    padding: 25px;
+    width: 50em;
+}
+
+li a{
+    color: black;
+    margin-right: 30px;
+    padding: 0.5em 1.3em;
+    border: 1px rgb(137, 137, 255);
+    border-radius: 3em;
+    background-color: rgb(137, 137, 255);
+    text-decoration: none;
+}
+
+li a:hover{
+    background-color: rgb(243, 151, 109);
+}
+
+li .menu{
+    line-height: 1.6em;
+}
+
+li .explain2{
+    margin-bottom: 5px;
+}
+
+footer{
+    text-align: center;
+    color: #686577;
+    margin-top: 30px;
+    font-family: "Pretendard-Regular", serif;
+}

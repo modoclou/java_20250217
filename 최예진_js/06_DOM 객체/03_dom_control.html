@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 요소 조작하기</title>
+    <style>
+        p.syntax{
+            white-space: pre;
+        }
+
+        div.example{
+            border: 1px solid gray;
+            padding: 10px;
+        }
+
+        /* classList용 add */
+        .isActive{
+            background-color: rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+        }
+        
+        .itemList{
+            list-style: none;
+            padding: 0;
+        }
+
+        .itemList li{
+            background-color: lightgray;
+            margin: 5px;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .itemList li.selected{
+            background-color: lightseagreen;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>웹 요소의 내용을 가져오고 수정하기</h1>
+    <dl>
+        <dt>요소.innerText</dt>
+        <dt>요소.innerText = "내용";</dt>
+        <dd>HTML 태그를 무시하고 요소의 텍스트만 가져오거나 변경</dd>
+        <dd>숨겨진 텍스트(display: none;)는 가져오지 않음</dd>
+        <dt>요소.innerHTML</dt>
+        <dt>요소.innerHTML = "내용";</dt>
+        <dd>요소의 HTML 코드(태그 포함)까지 가져오거나 변경</dd>
+        <dd>HTML 코드 변경 가능(보안 문제 발생 가능성)</dd>
+        <dt>요소.textContent</dt>
+        <dt>요소.textContent = "내용";</dt>
+        <dd>요소의 모든 텍스트(숨겨진 요소 포함)만 가져오거나 변경</dd>
+        <dd>HTML 태그를 무시하고 텍스트만 반환</dd>
+    </dl>
+    <div id="example1" class="example">
+        <p>안녕!! <span style="display: none;">숨겨진 텍스트</span></p>
+        <p>안녕!! <span>강조된 텍스트</span></p>
+        <p>안녕!! <span>보이는 텍스트</span></p>
+    </div>
+    <script>
+        const div1 = document.getElementById('example1');
+        console.log(div1.innerText); //display: none 제외한 inner text
+        console.log(div1.textContent); 
+        console.log(div1.innerHTML);
+        div1.innerHTML = `<h2>새로운 제목</h2>
+                          <p>새로운 내용입니다.</p>`;
+        div1.innertext = `<h2>새로운 제목</h2>
+                          <p>새로운 내용입니다.</p>`;
+    </script>
+
+    <hr><hr>
+
+    <h1>CSS 속성에 접근하고 수정하기</h1>
+    <ul>
+        <li>document.요소명.style.속성</li>
+        <li>document.요소명.style.속성 = "속성값";</li>
+    </ul>
+    <div id="example2" class="example"><p>안녕 <strong id="strong2">CSS 속성에 접근하기</strong></p>
+    </div>
+    <script>
+        const div2 = document.getElementById("example2");
+        div2.style.color = "red";
+        // query 접근
+        const strong = document.querySelector("#example2 strong");
+        strong.style.color = "blue";
+        strong.style.fontStyle = "italic";
+        // id 접근
+        // const strong2 = document.getElementById("strong2");
+        // strong2.style.color = "blue";
+</script>
+
+    <hr><hr>
+
+    <h1>Class 속성 추가, 삭제하기</h1>
+    <ul>
+        <li>요소.classList.add(클래스명)</li>
+        <li>요소.classList.remove(클래스명)</li>
+    </ul>
+    <div id="example3" class="example">
+        <p>안녕</p>
+    </div>
+    <script>
+        const div3 = document.getElementById("example3");
+        // div3 위에 마우스가 들어가면 classList.add("클래스이름");
+        div3.addEventListener("mouseenter", () => {
+            if(!div3.classList.contains("isActive")){ // 없어도 되지만 컴퓨터에게 분명히 명령하기 위한 if문
+                div3.classList.add("isActive");
+            }
+        });
+
+        // div3 위에서 마우스가 벗어나면 classList.remove("클래스이름");
+        div3.addEventListener("mouseleave", () => {
+            // isActive가 있다면
+            if(div3.classList.contains("isActive")){
+                div3.classList.remove("isActive");
+            }
+        });
+    </script>
+
+    <hr><hr>
+
+    <h1>forEach()</h1>
+    <ul>
+        <li>배열(Array)이나 NodeList(HTML 요소 목록) 같은 반복 가능한 객체에서 각 요소를 반복(iterate)하면서 특정 작업을 실행할 때 사용</li>
+        <li>배열의 모든 요소에 동일한 작업을 수행할 때 유용한 반복문</li>
+        <!-- 배열용 객체용 반복문은 이것보다 더 많다 -->
+    </ul>
+    <p class="syntax">
+        배열.forEach(function(요소, 인덱스, 배열) {
+            // 실행할 코드
+        });
+    </p>
+    <div id="example4" class="example"></div>
+    <script>
+        const div4 = document.getElementById("example4");
+        const fruits = ['사과', '포도', '바나나', '망고'];
+        // let listHTML = "<ul>";
+        //     listHTML += `<li>0번째 과일 : 사과</li>`;
+        //     listHTML += `<li>1번째 과일 : 포도</li>`;
+        //     listHTML += `<li>2번째 과일 : 바나나</li>`;
+        //     listHTML += `<li>3번째 과일 : 망고</li>`;
+        //     listHTML += "</ul>";
+
+        // let listHTML = "<ul>";
+        //     for(let i = 0; i <= fruits.length-1; i++){
+        //         listHTML += `<li>${i}번째 과일 : ${fruits[i]}</li>`;
+        //     }
+        //     listHTML += "</ul>";
+        //     div4.innerHTML = listHTML;
+
+        let listHTML = "<ul>";
+            fruits.forEach((fruit, i) => {
+                listHTML += `<li>${i}번째 과일 : ${fruit}</li>`;
+            });
+            listHTML += "</ul>";
+        div4.innerHTML = listHTML;
+    </script>
+
+    <h2>목록 클릭하기</h2>
+    <ul id="itemList" class="itemList">
+        <li>항목1</li>
+        <li>항목2</li>
+        <li>항목3</li>
+        <li>항목4</li>
+        <li>항목5</li>
+    </ul>
+    <script>
+        // const listItem = document.getElementById("itemList");
+        // const itemList = ['항목1', '항목2', '항목3', '항목4', '항목5'];
+        //     itemList.forEach
+
+        const listItems = document.querySelectorAll("#itemList li");
+        // listItems = [li, li, li, li, li];
+        // listItems.forEach((list) => {
+        //     list.addEventListener("click", () => {
+        //         list.classList.add("selected")
+        //     })
+        // });
+
+        listItems.forEach((list) => {
+            list.addEventListener("click", () => {
+                /* 
+                 * 항목을 클릭하면
+                 * 몽땅 remove()되었다가
+                 * 클릭한 애가 다시 add()로 바뀌도록 한다.
+                 */
+                let selectedItem = document.querySelector(".selected")
+                if(selectedItem){
+                    selectedItem.classList.remove("selected");
+                }
+                list.classList.add("selected");
+            })
+        });
+
+        // listItems.addEventListener("click", () => {
+        //     if(classList.contains("selected")){
+        //     classList.add("selected");
+        //     }
+        // });
+
+        // itemList.addEventListener("mouseleave", () => {
+        //     if(classList.contains("selected")){
+        //     classList.remove("selected");
+        //     }
+        // });
+
+        /*
+         * listItems를 돌면서
+         * "click", function(){
+         * listItems가 selected를 포함하지 않는다면
+         * classList.add()
+         * 
+         * listItems가 selected를 포함하고 있다면
+         * classList.remove()
+         * }
+         */
+    </script>
+</body>
+</html>

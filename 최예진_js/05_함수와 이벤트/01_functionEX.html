@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수 연습</title>
+</head>
+<body>
+    <script>
+        // let item1 = 5000 * 2;
+        // let item2 = 12000 * 1;
+        // let item3 = 3000 * 4;
+
+        /* 
+         * calcTotalPrice(){} 함수 만들기
+         * - 필요한 매개변수 : 단가, 수량
+         * - 총 가격 : 단가 * 수량
+         * 
+         * let item1 = calcTotalPrice() {}
+         */
+
+        function calcTotalPrice(unitPrice, quantity){
+            let totalPrice = unitPrice * quantity;
+            console.log(`${unitPrice}원의 물건이 ${quantity}개 있으면 총 ${totalPrice}원입니다.`);
+            return totalPrice;
+        }
+        
+        // console.log(`상품1 총 가격 : ${item1}원`)
+        // console.log(`상품2 총 가격 : ${item2}원`)
+        // console.log(`상품3 총 가격 : ${item3}원`)
+        
+        calcTotalPrice(5000, 2)
+        calcTotalPrice(12000, 1)
+        calcTotalPrice(3000, 4)
+
+
+        /* 
+         * item1Discount : 10% 할인
+         * item2Discount : 5% 할인
+         * item3Discount : 20% 할인
+         * 
+         * calcFinalPrice() {}
+         * 
+         * 필요한 변수 : 가격, 수량, 할인율
+         * - 총 가격 = 단가 * 수량;
+         * - 계산된 할인율이 적용된 가격 = 총 가격 * (1 - 할인율 / 100)
+         */ 
+        // 함수 선언
+        function calcFinalPrice(unitPrice, quantity, discount){
+            let totalPrice = unitPrice * quantity;
+            let applyDiscount = totalPrice * (1 - discount / 100);
+            console.log(`총 가격은 ${applyDiscount}원 입니다.`);
+        }
+        
+        // 함수 호출
+        calcFinalPrice(5000, 2, 10)
+        calcFinalPrice(12000, 1, 10)
+        calcFinalPrice(3000, 4, 10)
+
+        //console.log('상품 1 결제 금액 : itemDiscount + 원')
+        //console.log('상품 2 결제 금액 : itemDiscount + 원')
+        //console.log('상품 3 결제 금액 : itemDiscount + 원')
+
+        // function calcFinalPrice(unitPrice, quantity, discount){
+        //     let totalPrice = unitPrice * quantity;
+        //     let applyDiscount = totalPrice * (1 - discount / 100);
+        //     // console.log(`총 가격은 ${applyDiscount}원 입니다.`);
+        //     return applyDiscount;
+        // }
+        
+        // // 함수 호출
+        // let itemDiscount1 = calcFinalPrice(5000, 2, 10)
+        // let itemDiscount2 = calcFinalPrice(12000, 1, 10)
+        // let itemDiscount3 = calcFinalPrice(3000, 4, 10)
+
+        // console.log('상품 1 결제 금액 : itemDiscount1 + 원')
+        // console.log('상품 2 결제 금액 : itemDiscount2 + 원')
+        // console.log('상품 3 결제 금액 : itemDiscount3 + 원')
+        
+
+    </script>
+</body>
+</html>

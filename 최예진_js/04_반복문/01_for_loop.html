@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for 반복문</title>
+    <style>
+        p.syntax {
+            white-space: pre;
+        }
+    </style>
+</head>
+<body>
+    <h1>for 반복문</h1>
+    <hr><hr>
+    <p class="syntax">
+        for(초기식; 조건식; 증감식) {
+            실행할 문장;
+        }
+    </p>
+    <ol>
+        <li>초기식</li>
+        <li>조건식 확인</li>
+        <li>조건식 결과가 true면 { }안에 있는 문장 수행</li>
+        <li>증감식</li>
+        <li>2, 3, 4 반복하다가</li>
+        <li>조건식 결과가 false면 반복문 빠져 나옴</li>
+    </ol>
+
+    <button id="forLoop">hello1부터 hello5까지 출력하기</button>
+    <script>
+        document.getElementById("forLoop").onclick = function(){
+            let i = 0;
+            for(i = 1; i <= 5; i++){
+            console.log(`hello${i}`);
+            };
+        }
+    </script>
+
+    <button id="forLoop1">hello5부터 hello10까지 출력하기</button>
+    <script>
+        document.getElementById("forLoop1").onclick = function(){
+            for(let i = 5; i <= 10; i++){ // i에 변수 let으로 5를 할당하고 <=10이 되기 전까지 i++를 반복
+                console.log(`hello${i}`); // false 값이 되면 로그 출력 (괄호 안에 있으므로 반복되어 출력되는 값마다 출력)
+            }
+
+        }
+    </script>
+
+    <button id="forLoop2">1부터 10까지 1, 3, 5, 7, 9 출력하기</button>
+    <script>
+        document.getElementById("forLoop2").onclick = function(){
+            for(let i = 1; i <= 10; i++){ // i += 2
+                if(i % 2 == 1){
+                    console.log(`hello${i}`);
+                }
+            }
+        }
+    </script>
+
+    <button id="forLoop3">hello10부터 hello5까지 출력</button>
+    <script>
+        document.getElementById("forLoop3").onclick = function(){
+            for(let i = 10; i >= 5; i--){
+                // hello10, 9, 8, 7, 6, ..., hello1
+                console.log(`hello${i}`);
+            }
+        }
+    </script>
+
+    <button id="forLoop4">1부터 10까지 합</button>
+    <script>
+        document.getElementById("forLoop4").onclick = function(){
+            let sum = 0;
+            for(let i = 1; i <= 10; i++){
+                sum += i;
+                console.log(sum);
+                // 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 = 55
+                /* 
+                 * sum = i + sum
+                 * sum += i
+                 * 
+                 *     i / sum
+                 * 1 = 1 + 0
+                 * 3 = 2 + 1
+                 * 6 = 3 + 3
+                 * 10 = 4 + 6
+                 * 15 = 5 + 10
+                 * ...
+                 */
+            }
+            // console.log(sum); 결과값 한 번만 출력하기
+        }
+    </script>
+
+    <button id="forLoop5">1, 100, 50, 200, -100, 1000, 50의 합을 출력</button>
+    <script>
+        document.getElementById("forLoop5").onclick = function(){
+            // 1+ 100 + 50 + 200 + (-100) + 1000 + 50
+            let arr = [1, 100, 50, 200, -100, 1000, 50]; // arr[0], arr[1], arr[2]...arr[arr.length-1]
+            let sum = 0;
+            for(let i = 0; i <= arr.length-1; i++){
+                sum += arr[i];
+                console.log(`arr[${i}] : ${arr[i]} 일 때 sum : ${sum}`);
+            }
+            console.log("---------------------------");
+            console.log(`1+ 100 + 50 + 200 + (-100) + 1000 + 50 = ${sum}`);
+        }
+    </script>
+
+    <hr>
+    <h1>중첩 for문</h1>
+    <hr><hr>
+    <p>for문 안에 또 다시 for문을 중첩할 수 있다.</p>
+    <p class="syntax">
+        for(초기식1; 조건식1; 증감식1){
+            for(초기식2; 조건식2; 증감식2){
+                실행할 문장;
+            }
+        }
+    </p>
+    <ol type="A">
+        <li>초기식1</li>
+        <li>조건식1 확인</li>
+        <li>조건식1 결과가 true면 { } 문장 수행
+            <ol type="a">
+                <li>초기식2</li>
+                <li>조건식2 확인</li>
+                <li>조건식2 결과가 true면 { } 문장 수행</li>
+                <li>증감식2</li>
+                <li>b, c, d 반복하다가</li>
+                <li>조건식2 결과가 false면 안쪽에 있는 반복문 빠져 나옴</li>
+            </ol>
+        </li>
+        <li>증감식1</li>
+        <li>B, C, D 반복하다가</li>
+        <li>조건식1 결과가 false면 바깥쪽에 있는 반복문 빠져 나옴</li>
+    </ol>
+
+    <button id="gugudan">구구단</button>
+    <script>
+        document.getElementById("gugudan").onclick = function(){
+            // 2단부터 시작하므로 2 입력, 9단으로 끝
+            for(let i = 2; i <= 9; i++){
+                document.write(`<h3>${i}단 --------</h3>`)
+                for(let j = 1; j <= 9; j++){
+                    document.write(`${i} * ${j} = ${i * j}<br>`);
+                }
+            }
+        }
+        /*
+         * i = 2    2 <= 9    2단 ---------------- 출력
+         *                    j = 1    1 <= 9 2 * 1 = 1 <br> j++           참인가 아닌가 판단
+         *                    j = 2    2 <= 9 2 * 2 = 1 <br> j++
+         *                    ....
+         *                    j = 9 9 <= 9 2 * 9 = 18 <br>   j++
+         *                    j = 10 10 <= 9 false 이므로 안쪽 반복문에서 나옴
+         * i = 3      3 <= 9  3단 ---------------- 출력
+         * 
+         */
+    </script>
+</body>
+</html>

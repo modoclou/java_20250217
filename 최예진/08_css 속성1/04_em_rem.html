@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>em 단위와 rem 단위의 차이</title>
+  <style>
+    html{
+      font-size: 32px;
+    }
+    body{
+      font-size: 32px;
+    }
+    .box{
+      border: 2px solid gray;
+      padding: 50px;
+      margin: 100px;
+    }
+    /* em 단위
+        : 부모 요소에서 지정한 글자 크기가 기준
+        : 부모의 글자 크기를 상속받음
+      rem
+        : root(html)에서 지정한 글자 크기가 기준
+    */
+    .em{
+      font-size: 1em;
+      /* x(em)=n배 */
+    }
+    .rem{
+      font-size: 1rem;
+      /* root em */
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <p class="em">font-size : em 단위</p>
+  </div>
+  <div class="box">
+  <p class="rem">font-size : rem 단위</p>
+</div>
+</body>
+</html>

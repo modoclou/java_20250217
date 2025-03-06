@@ -1,0 +1,70 @@
+@charset "utf-8";
+
+@import url(reset.css);
+
+*{
+    box-sizing: border-box;
+}
+
+.container{
+    width: 50%;
+    min-width: 600px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container h1{
+    font-size: 3em;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+.tab-menu{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.tab-menu li{
+    border: 1px solid #999;
+    width: 200px;
+    padding: 15px 20px;
+    cursor: pointer;
+    border-radius: 20px 20px 0 0;
+    border-bottom: 0 none;
+}
+
+.tab-contents{
+    border: 1px solid #999;
+}
+
+.section{
+    padding: 20px;
+    display: none;
+    min-height: 300px;
+}
+
+.section h2{
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.section p{
+    line-height: 1.6;
+}
+
+/* active */
+/* css 적용, li class 부여로 활성화 확인 */
+.tab-menu li.active{
+    background-color: rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+}
+
+.section.active{
+    background-color: rgba(255, 255, 0, 0.2);
+    display: block;
+}
+

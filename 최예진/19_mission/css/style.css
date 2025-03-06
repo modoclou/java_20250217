@@ -1,0 +1,125 @@
+@charset "utf-8";
+
+.wrap{
+    width: 80%;
+    max-width: 100%;
+    border: 5px solid gray;
+    display: flex;
+    flex-direction: column;
+    /* overflow: hidden; */
+}
+
+.header {
+    display: flex;
+    background-color: crimson;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1{
+    /* display: flex;
+    justify-content: left;
+    vertical-align: baseline; */
+    padding: 30px;
+}
+
+.menu{
+    display: flex;
+    /* align-items: center; */
+    /* margin-top: -45px;*/
+    margin-right: 15px; 
+    gap: 30px;
+}
+
+/* .menu li{
+    display: inline-block;
+} */
+
+li a{
+    color: blue;
+}
+
+h2{
+    padding: 10px 10px 25px 10px;
+}
+
+.card-list{
+    gap: 10px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: minmax(50px, auto);
+}
+
+.card-item{
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    padding: 100px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+
+.footer{
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+@media screen and (max-width: 786px){
+    .header {
+        display: block;
+        align-items: center;
+    }
+    h1{
+        display: flex;
+        justify-content: center;
+    }
+    .menu{
+        margin: auto;
+        justify-content: space-between;
+        background-color: gray;
+        padding: 15px 70px;
+        gap: 15px;
+    }
+    .card-list{
+        gap: 10px;
+        padding: 10px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: minmax(50px, auto);
+    }    
+    .card-item{
+        border: 2px solid rgba(0, 0, 0, 0.2);
+        padding: 50px;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .header {
+        display: block;
+        align-items: center;
+    }
+    h1{
+        display: flex;
+        justify-content: center;
+    }
+    .menu{
+        margin: auto;
+        justify-content: space-between;
+        background-color: gray;
+        padding: 15px 30px;
+        gap: 15px;
+    }
+    .card-item{
+        border: 4px solid rgba(0, 0, 0, 0.2);
+        padding: 15px;
+    }
+    .card-list{
+        gap: 10px;
+        padding: 10px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: minmax(50px, auto);
+    }
+}
