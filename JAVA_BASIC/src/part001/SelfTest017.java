@@ -15,11 +15,16 @@ package part001;
 
 public class SelfTest017 {
 	public static void main(String[] args) {
-		int[][] array = new int[4][5];
-		array[0] = new int[]{1, 2, 3, 4, 5};       // 0-4
-        array[1] = new int[]{6, 7, 8, 9, 10};      // 5-9
-        array[2] = new int[]{11, 12, 13, 14, 15};  // 10-14
-        array[3] = new int[]{16, 17, 18, 19, 20};  // 15-19
+		int[][] arr = new int[4][5];
+		arr[0] = new int[]{1, 2, 3, 4, 5};       // 0-4
+        arr[1] = new int[]{6, 7, 8, 9, 10};      // 5-9
+        arr[2] = new int[]{11, 12, 13, 14, 15};  // 10-14
+        arr[3] = new int[]{16, 17, 18, 19, 20};  // 15-19
+        
+        for(int i=0; i<arr.length; i++) {
+        	for(int v=0; v<arr[i].length; v++) {
+        		if(v%5==0) { System.out.println(); }
+        		System.out.print(arr[i][v]+ "\t");
 
 //        for(int i=0; i<arr.length; i++) {
 //			for(int v=0; v<arr[i].length; v++) {

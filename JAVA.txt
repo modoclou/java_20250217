@@ -1384,90 +1384,6 @@ Score.info() 사용시화면
 
 
 
-● 5. 클래스배열
-
-   클래스[] 배열명 = new 클래스[갯수];
-
-   String[] arr = new String[3];
-   A1    [] carr = new A1[3];    // [null, null, null]
-   ※ null - 공간은 있지만 값이 비어있음
-
-   carr[0] = new A1(); ※ 생성자를 불러서 인스턴스 변수를 초기화해 사용 가능하게 만들기
-   carr[0]
-   1번지{ name="" } ← carr [0] 1번지 
-
-
-연습문제1)  클래스배열
-패키지명 : com.company.java011_ex
-클래스명 : ClassArrEx1
-다음과 같이 코드를 작성하시오.
-ㅁ출력된 화면
-Apple [name=RED, order=iron, num=2, price=1000]
-Apple [name=GREEN, order=hulk, num=1, price=1500]
-Apple [name=GOLD, order=captain, num=3, price=2000]
-
-ㅁ주어진 옵션
-public class Apple{   //// 실행 main과 파일을 분리해주세요!
-   private String name;
-   private String order;
-   private int num;
-   private int price;
-}
-
-public class ClassArrEx1{
-  public static void main(String[] args) {
-        Apple[] apples= new Apple[3]; 
-        //위의 화면처럼 값 셋팅
-        //위의 화면처럼 출력
-  }
-}
-
-
-
-
-
-연습문제2)  클래스배열
-패키지명 : com.company.java011_ex
-클래스명 : ClassArrEx2
-다음과 같이 코드를 작성하시오.
-ㅁ출력된 화면
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-이름   국어   영어   수학   평균   합격여부
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-아이언맨   100   100   100   100.0   합격
-헐크   90   60   80   76.0   합격
-블랙팬서   20   60   90   56.0   불합격
-
-ㅁ주어진 옵션
-public class  Score2{   //// 실행 main과 파일을 분리해주세요!
-   private String name;   // 셋팅 setName() ,가져오기 getName()
-   private int kor, eng, math;  // setKor , getKor /  setEng , getEng / setMath , getMath
-   private double avg;
-   private String pass;
-}
-public class ClassArrEx2 {
-  public static void main(String[] args) {
-   ////// MODEL
-   Score2[] std = new Score[3];  
-   // 0번째에는 아이언맨 정보넣기  - "아이언맨", 100, 100, 100
-   // 1번째에는 아이언맨 정보넣기  - "헐크", 90, 60, 80
-   // 2번째에는 아이언맨 정보넣기  - "블랙팬서", 20, 60, 90
-      
-   ////// CONTROLLER - 처리 해결사 Controller)
-   Score2Process process = new Score2Process();
-   process.process_avg(std); 
-   process.process_pass(std); 
-   process.process_pass(std);  
-   
-   ////// VIEW       - CONSOLE , WEB
-   Score2Print  print = new Score2Print();
-   print.show(std);  
-  }
-}
-
-
-
-
 ● 3. static / final 
 1. runtime data area
 method : 정보저장 , static, final
@@ -1615,8 +1531,8 @@ class User002 {
 - 클래스 및 구성요소에 대한 접근제한 역할
 		클래스내부            패키지(폴더)	하위클래스	그외
 public		O		O		O		O
-protected		O		O		O (extends)	X 
-default(package)     O                         O		X		X
+protected	O		O		O (extends)	X 
+default(package)    O                      O		X		X
 private		O		X		X		X
 
 ---------------------
@@ -1632,10 +1548,324 @@ class A{
 
 
 
+1. runtime data area 주로사용하는 3가지 부분을 적으시오.
+heap stack(s) method
+
+Q2. 제어자 - 넓은범위에서 좁은 범위로 적으시오. 
+public(아무데서나) > protected(extends 키워드로 아무데서나) > package(같은 폴더, default) > private(클래스 내에서 - getters/setters)
+
+Q3. 파일분리를 하려고 합니다. >> public class A{} public 키워드 붙이기
+Q3-1.  com.company.ex 패키지에 저장
+class A{  
+    private String name;   
+    private  int age;
+
+    public A(){}
+    public A(String name, int age){  this.name=name; this.age = age;}
+    //##3-3 tostring
+    @Override  public String toString(){  return  "A[name="+name+",age="+age+"]"; }
+    //##3-4 setter/getter
+    public String getName(){  return name; }
+    public void setName(String name){ this.name=name; }
+    public int    getAge(){  return age; }
+    public void setAge(int age){ this.age=age; }
+}
+ 
+Q3-2.  com.company.basic 패키지에있는 Test.java 파일에서 class A를 사용할 수 있게 만드시오.
+   A a1 = new A();  을 할수 가 없음! 
 
 
 
 
 
 
+● 5. 클래스배열
 
+   클래스[] 배열명 = new 클래스[갯수];
+
+   String[] arr = new String[3];
+   A1    [] carr = new A1[3];    // [null, null, null]
+   ※ null - 공간은 있지만 값이 비어있음
+
+   carr[0] = new A1(); ※ 생성자를 불러서 인스턴스 변수를 초기화해 사용 가능하게 만들기
+   carr[0]
+   1번지{ name="" } ← carr [0] 1번지 
+
+
+연습문제1)  클래스배열
+패키지명 : com.company.java011_ex
+클래스명 : ClassArrEx1
+다음과 같이 코드를 작성하시오.
+ㅁ출력된 화면
+Apple [name=RED, order=iron, num=2, price=1000]
+Apple [name=GREEN, order=hulk, num=1, price=1500]
+Apple [name=GOLD, order=captain, num=3, price=2000]
+
+ㅁ주어진 옵션
+public class Apple{   //// 실행 main과 파일을 분리해주세요!
+   private String name;
+   private String order;
+   private int num;
+   private int price;
+}
+
+public class ClassArrEx1{
+  public static void main(String[] args) {
+        Apple[] apples= new Apple[3]; 
+        //위의 화면처럼 값 셋팅
+        //위의 화면처럼 출력
+  }
+}
+
+
+
+
+
+연습문제2)  클래스배열
+패키지명 : com.company.java011_ex
+클래스명 : ClassArrEx2
+다음과 같이 코드를 작성하시오.
+ㅁ출력된 화면
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+이름   국어   영어   수학   평균   합격여부
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+아이언맨   100   100   100   100.0   합격
+헐크   90   60   80   76.0   합격
+블랙팬서   20   60   90   56.0   불합격
+
+ㅁ주어진 옵션
+public class  Score2{   //// 실행 main과 파일을 분리해주세요!
+   private String name;   // 셋팅 setName() ,가져오기 getName()
+   private int kor, eng, math;  // setKor , getKor /  setEng , getEng / setMath , getMath
+   private double avg;
+   private String pass;
+}
+public class ClassArrEx2 {
+  public static void main(String[] args) {
+   ////// MODEL
+   Score2[] std = new Score[3];  
+   // 0번째에는 아이언맨 정보넣기  - "아이언맨", 100, 100, 100
+   // 1번째에는 아이언맨 정보넣기  - "헐크", 90, 60, 80
+   // 2번째에는 아이언맨 정보넣기  - "블랙팬서", 20, 60, 90
+      
+   ////// CONTROLLER - 처리 해결사 Controller)
+   Score2Process process = new Score2Process();
+   process.process_avg(std); 
+   process.process_pass(std); 
+   process.process_pass(std);  
+   
+   ////// VIEW       - CONSOLE , WEB
+   Score2Print  print = new Score2Print();
+   print.show(std);  
+  }
+}
+
+
+
+● 6. 상속
+1. 상속? > 클래스의 재사용 - 새로운 부분만 추가, 수정해서 사용
+2. super vs sub
+   부모      자식
+   상위      하위
+  parent    chlid
+  super     sub
+3. 모든 클래스는 Object 클래스를 상속
+4. UML - 부모 ← 자식
+5. 장점 - 빠른개발, 코드의 중복성 제거, 다형성(하나의 타입으로 여러 타입을 관리)
+6. 문법
+   class 자식클래스 extends 부모클래스 (O)   단일상속
+   class 자식클래스 extends 부모클래스1, 부모클래스2 (X)   
+
+
+● 7. 상속 시 부모 속성을 사용할 수 있는 이유?
+  - 부모생성자(super)를 호출해
+    부모의 인스턴스 변수를 초기화해 사용 가능하게 만들어줌
+
+● 8. 오버라이드
+  - @Override
+  - 상속(extends) 시 부모의 메서드와 동일한지
+
+
+● 6-2. 클래스 다이어그램
+1. 시스템을 구성하는 클래스들 사이 관계를 표현
+2. 클래스 - 객체를 생성하는 설계도
+
+3. https://starumi.io/ - 다운로드 - 설치
+
+4. 사용법
+ - 클래스
+  -------------------
+  [   Animal   ]
+  -------------------
+  Add - Attribute  ( 멤버변수 )
+  -------------------
+  Add - Operation ( 멤버함수 )
+  -------------------
+
+
+5. UML 관계
+ 1) 연관관계
+ 2) 일반화관계
+ 3) 집합관계
+ 4) 의존관계
+ 5) 실체화관계 (인터페이스)
+
+.....................................................................................
+ 1) 연관관계
+> 2) 일반화관계 ( 상속 - extends, IS-A(고양이는 동물이다), 속이 빈 화살표 )
+   2-1) 상속관계
+   2-2) IS-A 관계 - 한 클래스가 다른 클래스를 포함하는 상위 개념
+    - 고양이는 동물이다. (O)  is - A 관계
+    - 사람도 동물이다.   (O)
+    - 동물은 고양이다.   (X)
+ 3) 집합관계
+ 4) 의존관계
+>5) 실체화관계 ( 인터페이스 - implements, Can do this, 빈삼각형과 점선 )
+  5-1) 핑클 - 약속할게... (점선 - 약속은 깨질 수 있다)
+  5-2) 객체가 해야할 일, 할 수 있는 일 - 책임
+.....................................................................................
+
+● 7. 다형성
+1. 다형성
+  - 많은 형상을 띄는 성품
+  - 여러 타입의 객체를 하나의 타입으로 관리
+
+2. 부모는 자식을 담을 수 있다. (업캐스팅)
+--------------------------------
+<<class>> Animal    [ 이름, 나이  / 먹기, 자기, 배변 ]
+	   ↑
+<<class>> Cat        [ 동물 등록증 / 꾹꾹이 하기 ]
+--------------------------------
+
+Animal ani = new Cat();  //부모 = 자식
+
+2-1) Animal ani 		      { 이름, 나이 / 먹기, 자기, 배변 } 보장!
+2-2  Cat() → Animal() → Object()
+2-3) {동물등록증 / 꾹꾹이 하기} + { 이름, 나이 / 먹기, 자기, 배변 }
+
+
+3. 자식은 부모를 담을 수 있다. (다운캐스팅)
+--------------------------------
+<<class>> Animal	  [ 이름, 나이  / 먹기, 자기, 배변 ]
+	   ↑
+<<class>> Cat	  [ 동물 등록증 / 꾹꾹이 하기 ]
+--------------------------------
+
+Cat cat = new Animal();   // 자식 = 부모 ( 다운캐스팅 )
+1. Cat cat
+{ 이름, 나이 / 먹기, 자기, 배변 } + {동물등록증 / 꾹꾹이 하기}
+
+2. new Animal();
+{ 이름, 나이 / 먹기, 자기, 배변 }
+
+3. 만족시키지 못하는 범위가 생김
+{동물등록증 / 꾹꾹이 하기} 
+해결방안: 부모가 자식(생성단)을 담은 적이 있어야 한다
+
+4. 쓰는 이유
+부모타입으로 자식 객체들 관리 가능(하게 만들기 위해)
+   Animal
+   ↑    ↑
+Cat     Person
+
+Animal[] animals = { new Cat(), new Cat(), new Person(), new Person(), };
+
+
+// Q1. 상속도 그리기
+// Q2. 각클래스에서 사용할수있는 멤버변수/멤버메서드
+class Papa extends Object{  
+   int money = 10000;     
+   public Papa() { super(); }
+   public void sing() {  System.out.println("GOD-거짓말");  }
+}// end class
+class Son extends Papa{ 
+   int money = 1500;
+   public Son() { super(); }
+   @Override public void sing() {  System.out.println("빅뱅-거짓말"); }
+} // end class
+public class PolyEx001 {
+   public static void main(String[] args) { 
+      Papa mypapa = new Son2();    
+      // Q3. Papa mypapa 의미?
+      // Q4. 인스턴스화한 실제 메모리 빌려온그림
+      System.out.println(mypapa.money); // Q5.  출력   
+      mypapa.sing();  //Q6. 출력 
+       //Q7. mypapa.money 를 이용해서  1500 출력되게 해주세요.  
+   }
+}
+
+
+연습문제2)  다형성
+패키지명 : com.company.java012_ex
+클래스명 : PolyEx002 
+다음과 같이 코드를 작성하시오.
+class Parent7  extends Object{
+   int x = 100;
+   public Parent7() { super(); }
+   void method() { System.out.println("Parent Method"); }
+} 
+class Child7 extends Parent7 {
+   int x = 200;
+   public Child7() { super(); }
+   @Override  void method() { System.out.println("Child Method"); }
+}
+public class PolyEx002 {
+   public static void main(String[] args) {
+      Parent7 p = new Child7();     
+      // Q3.  Parent7 p   보장하는 범위   
+      // Q4. 인스턴스화 했을때 사용가능한 범위 : new Child7()  
+      
+                            Child7 c = new Child7();     
+      System.out.println("p.x = " + p.x);  // Q5. 출력되는 내용   
+      p.method();  // Q6. 출력되는 내용     
+      System.out.println("c.x = " + c.x);   // Q7. 출력되는 내용  
+      c.method();   // Q8. 출력되는 내용   
+   }
+}
+
+
+
+● 8. abstract
+1. 추상화( abstract )
+- 실체화된 객체들 간에 공통된 속성을 추출한 것
+- 미완성적인 개념 ( new 사용불가 )
+- 공통된 필드와 메서드의 이름을 통일할 목적
+
+2. 추상클래스
+abstract class Animal{  // abstract class
+    String name;    // 인스턴스변수 - this
+    abstract void sound();  // abstract method {} 구현부 없음!
+}
+class Cat extends Animal{
+   @Override void sound(){  }
+}
+2-1. Animal ani = new Animel();  X  // 구현부가 없어 미완성적인 개념이기 때문에 new 사용불가
+2-2. 자식 클래스를 이용해 구현해야 함.
+
+
+
+● 9. Interface
+1. interface
+ 개발 코드와 객체 사이 연결
+- 개발 코드 변경 없이 객체를 바꿔낄 수 있도록 하는 역할
+
+2. abstract(Is A : 고양이는 동물이다) vs interface ( can do this )
+ - 추상화 정도가 interface가 더 높다.
+ 1) abstract - 인스턴스 변수, 일반 메서드 추상메서드 둘 다 가질 수 있으나 
+ 2) interface - 상수(public satic final) + 추상 메서드(public abstract)만 가짐
+
+3. 프로젝트진행시 interface 사용하면
+   다른 구성원들이 각각의 부분을 완성할 때까지 기다리지 않고
+   규약만 정해두고 본인 부분만 작성
+
+4. interface 형식
+
+   interface 인터페이스명{
+       상수;  // public static final 컴파일러가 자동으로 붙여줌	method area
+       추상메서드;  // public abstract 붙음	{} X - this 무관X
+   }
+
+   class InterSon implements 인터페이스명{ }
+
+   class InterSon ectends 클래스명 implements 인터페이스명1, 인터페이스명2{ }
+   // 구현력이 없어서 다중상속가능

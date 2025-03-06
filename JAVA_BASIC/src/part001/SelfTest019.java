@@ -8,13 +8,15 @@ package part001;
  **/
 
 class Hap{
-	int a=3; int b=5; int hap;
-	void hap(){
+	int hap=0;
+	void hap(int a, int b){
 		hap = a + b;
 	}
 }
 public class SelfTest019 {
 	public static void main(String[] args) {
-		System.out.println("두 수의 합: " + return result;);
+		Hap h = new Hap();
+		h.hap(3,5);
+		System.out.println("두 수의 합: " + h.hap);
 	}
 }

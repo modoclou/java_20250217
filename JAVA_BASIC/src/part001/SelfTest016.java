@@ -17,6 +17,7 @@ public class SelfTest016 {
 				{ 200, 201, 202 }	};
 		for(int i=0; i<arr.length; i++) {
 			for(int v=0; v<arr[i].length; v++) {
+				if(v%3==0) { System.out.println(); }
 				System.out.print(arr[i][v]+ "\t"); }
 		}
 //		//3
