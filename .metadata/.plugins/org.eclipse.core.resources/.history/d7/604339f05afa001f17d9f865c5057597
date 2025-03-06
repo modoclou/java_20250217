@@ -1,0 +1,9 @@
+package com.company.java013;
+
+
+
+public class Interface001 {
+	public static void main(String[] args) {
+		
+	}
+}

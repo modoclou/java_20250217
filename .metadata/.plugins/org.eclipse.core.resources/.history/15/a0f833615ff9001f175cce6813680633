@@ -1,0 +1,20 @@
+package com.company.java012;
+
+// 1. 클래스는 부품객체
+// 2. 상태(멤버변수)와 행위(멤버함수)
+/* 3. 상속 - 재활용
+ * Object {} 
+ * 
+ * A1
+ * 
+ * B1
+ * 
+ * C1
+ *
+ */
+
+public class Extends001 {
+	public static void main(String[] args) {
+		
+	}
+}

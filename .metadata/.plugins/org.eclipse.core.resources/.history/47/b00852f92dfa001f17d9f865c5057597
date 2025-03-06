@@ -1,0 +1,22 @@
+package com.company.java013;
+
+class Parent{
+	int i, j;
+	pulic Parent() { super(); } /// 1)누굴 호출한 것인지 => 
+	public Parent(int i, j) {
+		super(); /// 2)누굴 호출한 것인지 => 
+		this.i=i;
+		this.j=j;
+	}
+} //end parent
+
+class Child extends Parent{
+	int k;
+	public Child() { super(); } /// 3)누굴 호출한 것인지 => 
+	public Chils(i, j); /// 4)누굴 호출한 것인지 => 
+}
+
+
+public class RepeatQ1415 {
+
+}

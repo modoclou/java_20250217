@@ -1,0 +1,19 @@
+package com.company.java012;
+
+/* 1. 클래스는 부품객체
+ * 2.     상태와 행위
+ * 3. 상속 - 재사용
+	Object
+	  ↑	
+	TestA  int a / toString
+	  ↑
+	TestB  int b / toString
+*/
+//class TestA extends Object{ int a; }
+//class TestB extends Object{ int b; }
+
+public class Poly002 {
+	public static void main(String[] args) {
+		
+	}
+}

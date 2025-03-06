@@ -1,0 +1,32 @@
+package com.company.java013;
+
+class MemberCall001{
+	int instanceValue=10;
+	static int classValue=20;
+	
+	int instanceValue2= classValue;
+	static int classValue2=instanceValue;
+} //1)라인A
+
+static void staticMethod1() {
+	System.out.println(classValue);
+	System.out.println(instanceValue);
+} //2)라인B
+
+void instanceMethod1() {
+	System.out.println(classValue);
+	System.out.println(instanceValue); //3)라인C
+}
+
+static void staticMethod2(){
+	System.out.println(classValue);
+	instanceMethod1(); //4)라인D
+}
+
+void instanceMethod2() {
+	staticMethod1(); //5)라인E
+} //end class
+
+///컴파일 에러가 발생하는 라인? 	A. D라인
+///그 이유는?					A. 흠
+

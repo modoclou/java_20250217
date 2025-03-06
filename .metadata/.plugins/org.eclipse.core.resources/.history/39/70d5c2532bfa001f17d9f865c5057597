@@ -1,0 +1,24 @@
+package com.company.java013;
+
+/**
+ Q7. 접근제어자 사용범위를 작은 순서에서 큰 순서로 적기
+ 
+ Q8. 다음 Car4는 DTO목적이다.
+  8-1. color 접근제어자가 private이므로 ( # / # ) 를 작성해 데이터를 셋팅하고, 데이터를 가져오고
+  8-2. System.out.println(컬러객체명) 시
+  	   Car4[color=red]게 출력되게 만들려면 ( # ) 메서드가 필요함.
+ 
+**/
+
+class Car4 extends Object{
+	private String color; //private 수정X
+	public Car4() { super(); }
+	@Override
+	public String toString() {
+		return "Car4 [color=" + color + "]";
+	}
+}
+
+public class RepeatQ78 {
+
+}

@@ -1,0 +1,13 @@
+package com.company.java013;
+
+abstract // 일반클래스+설계
+class Animal{
+	String name; int age;
+	abstract void eat(); 
+	abstract void sleep(); 
+	abstract void poo(); 
+}
+		
+public class Abstract001 {
+
+}

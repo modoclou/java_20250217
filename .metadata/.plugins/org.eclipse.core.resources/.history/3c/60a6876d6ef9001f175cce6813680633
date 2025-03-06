@@ -1,0 +1,35 @@
+package com.company.java012;
+
+//1. 클래스는 부품객체
+//2. 상태(멤버변수)와 행위(멤버함수)
+//3. 상속 - 클래스의 재사용(재활용)
+
+/*
+	Object
+	  ↑
+	MobileNote7   String iris(private) / void newshow();
+	  ↑
+	MobileNote8   String face(private) / void newshow();
+	  ↑
+	MobileNote9   int battery(private) / void newshow();
+ */
+
+class MobileNote7 extends Object{}
+class MobileNote8 extends MobileNote7{}
+class MobileNote9 extends MobileNote7{
+	public void setIris(String string) {
+	}
+	public void setFace(String string) {
+	}
+	public void newshow() {
+	}	
+}
+
+public class Extends003 {
+	public static void main(String[] args) {
+		MobileNote9 my9 = new MobileNote9();
+		my9.setIris("brown");
+		my9.setFace("pretty");
+		my9.newshow();
+	}
+}

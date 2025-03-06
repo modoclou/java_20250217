@@ -1,0 +1,30 @@
+package part001;
+
+/**
+	1.4*5 배열만들기
+ 	2.배열에 1~20까지 데이터 입력
+ 	3.다음과 같이 출력하기 
+ 	
+ 	1	2	3	4	5
+ 	6	7	8	9	10
+ 	11	12	13	14 	15
+ 	16	17	18	19	20
+ **/
+
+public class SelfTest017 {
+	public static void main(String[] args) {
+		int[][] arr = {
+				{ 1, 2, 3, 4, 5 },
+				{ 6, 7, 8, 9, 10 }	};
+		int[][] arr2 = {
+				{ 11, 12, 13, 14, 15 },
+				{ 16, 17, 18, 19, 20 }	};
+		for(int i=0; i<arr.length; i++) {
+			for(int v=0; v<arr[i].length; v++) {
+				System.out.println(arr[i][v] + "\t");	}
+			for(i=0; i<arr2.length; i++) {
+				for(int v=0; v<arr2[i].length; v++) {
+					System.out.println(arr2[i][v] + "\t");	}
+		}
+	}
+}

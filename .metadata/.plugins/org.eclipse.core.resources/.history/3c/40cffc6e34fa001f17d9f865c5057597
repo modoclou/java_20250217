@@ -1,0 +1,30 @@
+package com.company.java013;
+
+class Parent{
+	int i, j;
+	public Parent() { super(); } /// 1)누굴 호출한 것인지 => 
+	public Parent(int i, int j) {
+		super(); /// 2)누굴 호출한 것인지 => 
+		this.i=i;
+		this.j=j;
+	}
+} //end parent
+
+class Child extends Parent{
+	int k;
+	public Child() { super(); } /// 3)누굴 호출한 것인지 => 
+	public Child(i, j); /// 4)누굴 호출한 것인지 => 
+	this.k=k;
+} // end child
+
+public class ExtendsBasic007_Super{
+	public static void main(String [] args) {
+		Child child=new Child(10, 20, 30);
+		System.out.println(child.i); //5) 결과 출력
+	}
+}
+
+
+public class RepeatQ1415 {
+
+}

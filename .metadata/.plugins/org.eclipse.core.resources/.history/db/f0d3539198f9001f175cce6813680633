@@ -1,0 +1,14 @@
+package com.company.java012;
+
+/*			Object
+			  ↑
+			 Calc
+		↑    ↑     ↑	 ↑
+	  Plus Minus Multi Divide
+ */
+
+public class Poly005_arr {
+	public static void main(String[] args) {
+		
+	}
+}

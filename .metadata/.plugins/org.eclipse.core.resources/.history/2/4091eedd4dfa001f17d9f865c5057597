@@ -1,0 +1,18 @@
+package com.company.java013;
+
+abstract class Rectangle002{
+	String showArea;
+}
+abstract class Triangle002{}
+abstract class Circle002{}
+
+public class Abstract002 {
+	public static void main(String[] args) {
+		Rectangle002 rec = new Rectangle002();
+		rec.showArea(10, 10);
+		Triangle002 tri= new Triangle002();
+		tri.showArea(10, 10);
+		Circle002 cir = new Circle002();
+		cir.showArea(10);
+	}
+}

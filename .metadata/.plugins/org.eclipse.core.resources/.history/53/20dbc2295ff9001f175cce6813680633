@@ -1,0 +1,9 @@
+package com.company.java012;
+
+
+
+public class Extends001 {
+	public static void main(String[] args) {
+		
+	}
+}

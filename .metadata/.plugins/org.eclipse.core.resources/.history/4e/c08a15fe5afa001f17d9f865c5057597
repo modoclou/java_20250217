@@ -1,0 +1,13 @@
+package com.company.java013;
+
+//1. 클래스는 부품객체
+//2. 상태와 행위
+interface Animal{
+	String COMPANY="";
+}
+
+public class Interface001 {
+	public static void main(String[] args) {
+		
+	}
+}
