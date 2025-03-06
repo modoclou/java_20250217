@@ -1,7 +1,0 @@
-package com.company.basic;
-
-A a1 = new A();
-
-public class Test {
-
-}
