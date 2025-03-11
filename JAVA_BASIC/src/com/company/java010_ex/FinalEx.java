@@ -9,8 +9,8 @@ package com.company.java010_ex;
 }
  ***/
 class User002 {
-   final String nation = "Korea";   
-   final String jumin;   
+   String nation = "Korea";   
+   String jumin;   
    String name;
 
    public User002() { jumin="00000"; }

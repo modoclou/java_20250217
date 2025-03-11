@@ -13,7 +13,7 @@ class Score{
 	@Override public String toString() { return "Score [name=" + name + ", kor=" + kor + ", eng=" + eng + ", math=" + math + "]"; }
 	
 	@Override public int hashCode() { return Objects.hash(eng, kor, math, name); }
-	@Override public boolean equals(Object obj) { if (this == obj) return true; if (obj == null) return false; if (getClass() != obj.getClass()) return false; Score other = (Score) obj; return eng == other.eng && kor == other.kor && math == other.math && Objects.equals(name, other.name); }
+	@Override public boolean equals(Object obj) { if (this == obj) return true; if (obj == null) return false; if (getClass() != obj.getClass()) return false; Score2 other = (Score2) obj; return eng == other.eng && kor == other.kor && math == other.math && Objects.equals(name, other.name); }
 
 	public String getName() { return name; }
 	public void setName(String name) { this.name = name; }
@@ -27,20 +27,20 @@ class Score{
 
 public class SetEx004 {
 	public static void main(String[] args) {
-		HashSet <Score>  scores = new HashSet<>();
+		HashSet <Score2>  scores = new HashSet<>();
 		
-		scores.add(new  Score("아이언맨",30,40,50)); 
-		scores.add(new  Score("아이언맨",30,40,50)); 
-		scores.add(new  Score("아이언맨",30,40,50)); 
-		scores.add(new Score("헐크"	,40,60,70)); 
-		scores.add(new  Score("캡틴",80,90,100));	
+		scores.add(new  Score2("아이언맨",30,40,50)); 
+		scores.add(new  Score2("아이언맨",30,40,50)); 
+		scores.add(new  Score2("아이언맨",30,40,50)); 
+		scores.add(new Score2("헐크"	,40,60,70)); 
+		scores.add(new  Score2("캡틴",80,90,100));	
 				
 		System.out.println("유저수 > " + scores.size());
 		
 		//> 갯수는 3개로 나오게 만들기   ( hashCode, equals)
-		Iterator<Score> iter = scores.iterator();  //1 set모으기
+		Iterator<Score2> iter = scores.iterator();  //1 set모으기
 		while(iter.hasNext()) { // 2. 처리대상확인
-			Score temp = iter.next();
+			Score2 temp = iter.next();
 			int total  = temp.getKor() + temp.getEng() + temp.getMath();
 			double avg = total/3.0;
 			System.out.println(temp.getName() + "\t" + temp.getKor()

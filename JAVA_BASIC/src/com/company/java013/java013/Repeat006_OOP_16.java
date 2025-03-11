@@ -1,4 +1,4 @@
-package com.company.java013;
+package com.company.java013.java013;
 
 
 //Q1. 상속도 그리기
@@ -30,6 +30,7 @@ public class Repeat006_OOP_16 {
 		// Q3. Papa mypapa 의미?  {money=10000/sing()} 쓸수 있게 해줄께!
 		// Q4. 인스턴스화한 실제 메모리 빌려온그림 
 		//    1번지{money=1500 /sing()빅뱅-거짓말}-{ money=10000/--------}
+		
 		
 		//>> mypapa = 1번지{money=1500 /[sing()빅뱅-거짓말}-{ money=10000 ]/--------}
 		System.out.println(mypapa.money); // Q5.  출력      10000

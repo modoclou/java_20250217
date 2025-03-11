@@ -25,7 +25,8 @@ public class ListEx003_userinfo {
 		List<UserInfo>  users = new ArrayList<>();
 //		3. 다음의 데이터 넣기
 //		   new UserInfo("아이언맨" , 50) , new UserInfo("헐크" , 40) , new UserInfo("캡틴" , 120)
-//		List( 동적배열 ) / index(순서), 중복허용 /  add,get,size,remove, contains
+//		List( 동적배열 ) / index(순서), 
+		중복허용 /  add,get,size,remove, contains
 		users.add(new  UserInfo("아이언맨" , 50));
 		users.add(new  UserInfo("헐크"    , 40));
 		users.add(new  UserInfo("캡틴"    , 120));

@@ -33,7 +33,3 @@ public class MemberVarEx001{
   }
 } 
  
-
-public class MemberVarEx001 {
-
-}
