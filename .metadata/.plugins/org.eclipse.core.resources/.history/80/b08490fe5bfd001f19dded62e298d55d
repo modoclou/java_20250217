@@ -1,0 +1,43 @@
+package com.company.java015;
+
+import java.util.Scanner;
+
+import javax.swing.JFrame;
+
+class ActionLisner{
+	JFrame frame;
+
+public void view() {
+	frame  = new JFrame("BOX");
+	}
+}
+
+/*
+	1. UserInfo    Dto 클래스만들기    - 속성 :  private  String name; private  int age;
+	2. users ArrayList 만들기
+	3. 다음의 데이터 넣기
+	   new UserInfo("아이언맨" , 50) , new UserInfo("헐크" , 40) , new UserInfo("캡틴" , 120)
+	4. for+size / 향상된 for 이용해서 데이터 출력
+	5. 사용자들의 이름 입력받기 - 이름을 입력받으면 해당하는  유저의 자료출력
+	
+	> 원하는 유저의 이름을 입력하세요    _예) 아이언맨
+	"아이언맨" , 50
+ */
+
+class UserInfo{
+	private String name;
+	private int age;
+}
+
+public class ListEx003 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		ArrayList<String, int> users = new ArrayList<>();
+		new UserInfo("아이언맨" , 50);
+		new UserInfo("헐크" , 40);
+		new UserInfo("캡틴" , 120);
+//		users.add("아이언맨", 50);
+//		users.add("헐크", 40);
+//		users.add("캡틴", 120);
+	}
+}

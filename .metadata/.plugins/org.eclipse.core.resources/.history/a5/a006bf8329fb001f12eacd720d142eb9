@@ -1,0 +1,11 @@
+package com.company.java014;
+
+import java.util.Scanner;
+
+public class Exception001 {
+	public static void main(String[] args) {
+		int a=-1;
+		Scanner sc = new Scanner(System.in);
+		for(;;) {
+	}
+}

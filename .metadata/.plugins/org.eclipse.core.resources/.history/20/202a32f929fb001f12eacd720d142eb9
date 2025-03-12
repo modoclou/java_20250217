@@ -1,0 +1,8 @@
+package com.company.java014;
+
+public class Exception002 {
+	public static void main(String[] args) {
+		//1. try catch finally
+		//2. throws 메서드
+	}
+}

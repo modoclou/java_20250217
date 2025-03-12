@@ -1,0 +1,24 @@
+package com.company.java015;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+//1. 콜렉션 프레임워크 - 동적배열
+//2. 동적 배열이 나오게 된 배경? - 배멸의 단점 개선. 한 가지 자료형의 사이즈 고정
+
+public class Collection001_List {
+	public static void main(String[] args) {
+		//1. Step1. Array
+		String[] arr = new String[3];//공간 3개 고정
+		arr[0]="헐크";
+		System.out.println(Arrays.toString(arr));
+		
+		//2, Step2. 동적배열-List	(add-추가, get-가져오기, size-갯수, remove-삭제, contains-포함)
+		List list = new ArrayList();
+		list.add("one");
+		list.add(1);
+		list.add(3.14);
+		
+	}//end main
+}//end class

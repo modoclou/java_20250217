@@ -1,0 +1,22 @@
+package com.company.java015_ex;
+
+import java.util.HashSet;
+import java.util.Set;
+
+/*
+	1. Hash이용해서 colors 만들기
+	2. red, green, blue ,green 데이터 추가
+	3. 출력
+	4. 갯수출력
+ */
+
+public class SetEx001 {
+	public static void main(String[] args) {
+		Set<String> set = new HashSet<>();
+		Integer red; Integer blue; Integer green;
+		set.add(red);
+		set.add(green);
+		set.add(blue);
+		set.add(green);
+	}
+}

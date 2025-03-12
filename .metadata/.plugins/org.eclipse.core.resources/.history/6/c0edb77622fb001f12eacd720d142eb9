@@ -1,0 +1,10 @@
+package com.company.java014_ex;
+
+//1. 클래스는 부품객체 (멤버)
+//2. 조립
+
+public class NonameClassEx002 {
+	public static void main(String[] args) {
+		
+	}
+}

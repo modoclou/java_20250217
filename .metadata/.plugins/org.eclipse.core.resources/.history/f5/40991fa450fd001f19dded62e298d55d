@@ -1,0 +1,13 @@
+package com.company.java015;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ListEx002 {
+	public static void main(String[] args) {
+		ArrayList<String> numbers = new ArrayList<>();
+		numbers.add("one");
+		numbers.add("two");
+		numbers.add("three");
+	}
+}

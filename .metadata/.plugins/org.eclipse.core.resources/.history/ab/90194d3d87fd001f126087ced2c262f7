@@ -1,0 +1,44 @@
+package com.company.java015_ex;
+
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Objects;
+import java.util.Set;
+
+class Score{
+	private int kor, eng, math, rec, avg;
+	private String name;
+	
+	public Score() { super(); }
+	public Score(int rec, String name) { super(); this.rec = rec; this.name = name; }
+	@Override public String toString() { return "Grade [rec=" + rec + ", name=" + name + "]"; }
+	
+	public int getRec() { return rec; }
+	public void setRec(int rec) { this.rec = rec; } 
+	public String getName() { return name; }
+	public void setName(String name) { this.name = name; }
+	
+	@Override public int hashCode() { return Objects.hash(avg, eng, kor, math, name, rec); }
+	@Override public boolean equals(Object obj) {
+		if (this == obj) return true;
+		if (obj == null) return false;
+		if (getClass() != obj.getClass()) return false;
+		Score other = (Score) obj;
+		return avg == other.avg && eng == other.eng && kor == other.kor && math == other.math && Objects.equals(name, other.name) && rec == other.rec; }
+}
+
+public class SetEx004 {
+//	1. HashSet 만들기
+	Set<Score> scores = new HashSet<>();
+//	2. 아래데이터 넣기
+	scores.add(new Score("아이언맨", 30, 40, 50)); 
+	scores.add(new Score("아이언맨", 30, 40, 50)); 
+	scores.add(new Score("아이언맨", 30, 40, 50)); 
+	scores.add(new Score("헐크", 40, 60, 70)); 
+	scores.add(new Score("캡틴", 80, 90, 100));
+
+//	> 갯수는 3개로 나오게 만들기   (hashCode, equals)
+	
+//	3. Iterator로 출력하기 - 사용자정보,총점, 평균
+	Iterator <Score> iter = scores.iterator();
+}

@@ -1,0 +1,7 @@
+package com.company.java014;
+
+public class NonameClass001 {
+	public static void main(String[] args) {
+		
+	}
+}

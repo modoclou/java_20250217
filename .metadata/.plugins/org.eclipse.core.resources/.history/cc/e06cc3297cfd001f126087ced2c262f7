@@ -1,0 +1,23 @@
+package com.company.java015_ex;
+
+
+
+public class Coffee012 {
+	public Coffee012() { super(); }
+	public Coffee012(Coffee012 a1, Coffee012 a2) { super(); this.a1 = a1; this.a2 = a2; }
+	@Override public String toString() { return "Coffee012 [a1=" + a1 + ", a2=" + a2 + "]"; }
+	
+	public Coffee012 getA1() { return a1; }
+	public void setA1(Coffee012 a1) { this.a1 = a1; }
+	public Coffee012 getA2() { return a2; }
+	public void setA2(Coffee012 a2) { this.a2 = a2; }
+}
+
+public class Coffee{
+	public static void main(String[] args) {		
+		Coffee012 a1 = new Coffee012("까페라떼", 2, 4000);
+		a1.show();
+		Coffee012 a2 = new Coffee012();
+		a2.show();
+	}
+}
