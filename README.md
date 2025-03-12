@@ -1,20 +1,61 @@
-#### 1. 2025-02-17
-  1. WELCOME!
-  2. git (로컬저장소 · 원격저장소)
-  3. java (설치, eclipse)
+#### 17. 2025-03-12
+  1. Lambda/Stream 
+  2. JAVA I/O
+  3. new BufferedReader( new InputStreamReader(new FileInputStream(file)) )
+  4. Consumer / Supplier / Predicate / Function / Operator
 
-#### 2. 2025-02-18
-  1. 변수
-  2. 자료형 기본 - 실제값 저장, 참조형 - 주소값 저장 (String) / 논리형, 정수형(byte:1, short:2, int:4, long:8), 실수형 (float:4, double:8)
+#### 16. 2025-03-11
+  1. OOP(2), collection framework(Map)
+  2. Lambda/Stream
 
-#### 3. 2025-02-19
-  1. 자료형 복습, 형변환, %d(수열) %.2f / char ch = ' ';
-  2. 자료형 범위(연산자)
+#### 15. 2025-03-10
+  1. OOP(2), collection framework(Generic, List, Set)
+  2. 정리문제
+  3. Iterator
 
-#### 4. 2025-02-20
-  1. 연산자 복습, 제어문(if, switch), 제어 키워드(break)
-  2. 평균으로 합격 불합격 여부 출력하기, 양수 음수 zero 출력하기, 1/2/3 아니다 출력, 대소문자 판별 프로그램, 홀-남 짝-여 프로그램
-  3. 간이 계산기, 성적처리(총점, 평균, 합격여부, 수우미양가(레벨), 장학생여부), switch문으로 월 숫자 입력시 계절 출력
+#### 14. 2025-03-07
+  1. OOP(2) 
+  2. interface, implements, exec(exeception), Anoy class
+
+#### 13. 2025-03-06
+  1. OOP(2) 
+  2. abstract/interface
+
+#### 12. 2025-03-05
+  1. OOP extends(상속) 부모 = 자식(업캐스팅), 자식 = 부모(다운캐스팅)
+  2. getters/setters, toString, using field, superclass, 다형성
+
+#### 11. 2025-03-04
+  1. OOP Static, Final, Modifier(접근제어자), Class Arr
+  2. 클래스 배열
+  3. getter/setter, field, super, toString
+
+#### 10. 2025-02-28
+  1. array 다차원 배열(이중 for문, 2차원 배열) / Arrays.toString(arr), Arrays.deeptoString(arr)
+  2. public static 리턴값(void, or) 메서드명(파라미터[함수값]){} / 메서드{}; 호출(function, method, class)
+  3. method 매개 변환, return문(void 없을 시 필수)
+  4. show(a); call by value(전달값 복사해서 처리, 원본값 변경 X) vs call by reference(전달 주소 직접 참조해서 처리, 원본값 변경 O) / System.identityHashcode(str1)로 주소값 확인 시 값이 다르다.)
+  5. public static int add(int x, int y) / public static long add(int x, int y) - 자료형이 다르면 method overloading error, different paremeter
+  6. for(int a=0; int<ch.length; i++){} / for(int i=0; int<arr[i].length; i++){}
+  7. 3-3 임시공휴일(3.1절)
+
+#### 9. 2025-02-27
+  1. Array, 제어문(for, while, do while)
+  2. Array로 성적 평균, for 반복문(int i) 단계별ver 수식 작성 실습(~DAY006)
+  3. 2차원배열, 이중 for문(~DAY007 10%)
+
+#### 7, 8. 2025-02-25~26
+  1. 병결, 결석
+
+
+#### 6. 2025-02-24
+  1. for 복습, (for)while, do wile, array 실습(for+length-배열-로 출력)
+  2. 14. array 배열
+     - 배열?
+     - [같은 타입]의 데이터를 [연속된 공간에 저장]하는 자료구조
+     - 각 데이터의 저장 위치는 [인덱스]를 통해서 접근
+  3. int, char, String(...)[] arr
+  4. String 배열("다문자", "다문자1", "다문자2") / ch 배열(한 글자 문자)에서 a의 갯수 세기
 
 #### 5. 2025-02-21
   1. a는 a(1, 2, 3)다. 복습
@@ -27,49 +68,20 @@
   6. java005.Repeat_005 복습
   7. bank mini project ~Step2
 
-#### 6. 2025-02-24
-  1. for 복습, (for)while, do wile, array 실습(for+length-배열-로 출력)
-  2. 14. array 배열
-     - 배열?
-     - [같은 타입]의 데이터를 [연속된 공간에 저장]하는 자료구조
-     - 각 데이터의 저장 위치는 [인덱스]를 통해서 접근
-  3. int, char, String(...)[] arr
-  4. String 배열("다문자", "다문자1", "다문자2") / ch 배열(한 글자 문자)에서 a의 갯수 세기
+#### 4. 2025-02-20
+  1. 연산자 복습, 제어문(if, switch), 제어 키워드(break)
+  2. 평균으로 합격 불합격 여부 출력하기, 양수 음수 zero 출력하기, 1/2/3 아니다 출력, 대소문자 판별 프로그램, 홀-남 짝-여 프로그램
+  3. 간이 계산기, 성적처리(총점, 평균, 합격여부, 수우미양가(레벨), 장학생여부), switch문으로 월 숫자 입력시 계절 출력
 
-#### 7, 8. 2025-02-25~26
-  1. 병결, 결석
+#### 3. 2025-02-19
+  1. 자료형 복습, 형변환, %d(수열) %.2f / char ch = ' ';
+  2. 자료형 범위(연산자)
 
-#### 9. 2025-02-27
-  1. Array, 제어문(for, while, do while)
-  2. Array로 성적 평균, for 반복문(int i) 단계별ver 수식 작성 실습(~DAY006)
-  3. 2차원배열, 이중 for문(~DAY007 10%)
+#### 2. 2025-02-18
+  1. 변수
+  2. 자료형 기본 - 실제값 저장, 참조형 - 주소값 저장 (String) / 논리형, 정수형(byte:1, short:2, int:4, long:8), 실수형 (float:4, double:8)
 
-#### 10. 2025-02-28
-  1. array 다차원 배열(이중 for문, 2차원 배열) / Arrays.toString(arr), Arrays.deeptoString(arr)
-  2. public static 리턴값(void, or) 메서드명(파라미터[함수값]){} / 메서드{}; 호출(function, method, class)
-  3. method 매개 변환, return문(void 없을 시 필수)
-  4. show(a); call by value(전달값 복사해서 처리, 원본값 변경 X) vs call by reference(전달 주소 직접 참조해서 처리, 원본값 변경 O) / System.identityHashcode(str1)로 주소값 확인 시 값이 다르다.)
-  5. public static int add(int x, int y) / public static long add(int x, int y) - 자료형이 다르면 method overloading error, different paremeter
-  6. for(int a=0; int<ch.length; i++){} / for(int i=0; int<arr[i].length; i++){}
-  7. 3-3 임시공휴일(3.1절)
-
-#### 11. 2025-03-04
-  1. OOP Static, Final, Modifier(접근제어자), Class Arr
-  2. 클래스 배열
-  3. getter/setter, field, super, toString
-
-#### 12. 2025-03-05
-  1. OOP extends(상속) 부모 = 자식(업캐스팅), 자식 = 부모(다운캐스팅)
-  2. getters/setters, toString, using field, superclass, 다형성
-
-#### 13. 2025-03-06
-  1. OOP(2) 
-  2. abstract/interface
-
-#### 14. 2025-03-07
-  1. OOP(2) 
-  2. interface, implements, exec(exeception), Anoy class
-
-#### 15. 2025-03-10
-  1. OOP(2), collection framework 
-  2.
+#### 1. 2025-02-17
+  1. WELCOME!
+  2. git (로컬저장소 · 원격저장소)
+  3. java (설치, eclipse)
