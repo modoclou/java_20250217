@@ -1,7 +1,0 @@
-package com.company.java014;
-
-public class Exception002 {
-	public static void main(String[] args) {
-		
-	}
-}

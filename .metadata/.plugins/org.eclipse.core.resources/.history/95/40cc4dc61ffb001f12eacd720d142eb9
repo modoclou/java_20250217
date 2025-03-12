@@ -1,9 +1,0 @@
-package com.company.java014;
-
-interface Inter1{void method();} //public abstract
-
-public class NonameClass001 {
-	public static void main(String[] args) {
-		
-	}
-}
