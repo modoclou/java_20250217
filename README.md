@@ -1,3 +1,49 @@
+#### 18. 2025-03-13
+  1. JAVA I/O
+  2. Thread
+  3. Network - Reader/Writer
+  4. Network - new BufferedReader( new InputStreamReader(new FileInputStream(file)) )
+    		//#1. 경로
+            String folder_rel="경로";
+	    String   file_rel="파일이름";
+	    
+	    File folder = new File(folder_rel);
+	    File file = new File(folder_rel + file_rel);
+		
+		//#2. 폴더 + 파일 만들기
+	    try {
+	    if(! folder.exists()) { folder.mkdir(); }
+	    if(! file.exists()) { file.createNewFile(); }
+	    } catch(Exception e) { e.printStackTrace(); }
+
+    try {
+		String apiurl="주소?보낼 이름=값&이름=값"
+		+ URLEncoder.encode("이름", "UTF-8");
+			URL url = new URL(apiurl);
+		
+		//#2. HttpURLConnection
+			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+		
+		//#3. 요청파라미터
+			conn.setRequestMethod("GET"); //html메서드
+			conn.setRequestProperty("", "");
+			conn.setRequestProperty("", "");
+		//#4. 응답코드 - 200
+		System.out.println(conn.getResponseCode());
+		int code = conn.getResponseCode();
+		BufferedReader br;
+		if(code==200) {br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+		}else {
+			br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+		}
+
+		//#5. 응답데이터 - xml/json/csv
+			String line="";	StringBuffer sb = new StringBuffer();
+			while((line=br.readLine())!=null) {sb.append(line + "\n");}
+			System.out.println(sb.toString());
+			br.close(); conn.disconnect();
+		} catch(Exception e) { e.printStackTrace(); }
+
 #### 17. 2025-03-12
   1. Lambda/Stream 
   2. JAVA I/O
