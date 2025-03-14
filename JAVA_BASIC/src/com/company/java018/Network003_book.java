@@ -21,8 +21,8 @@ public class Network003_book {
 		
 		//#3. 요청파라미터
 			conn.setRequestMethod("GET");
-			conn.setRequestProperty("X-Naver-Client-Id", "reu63fdeQl8IXmwLVsRM");
-			conn.setRequestProperty("X-Naver-Client-Secre", "AvEnm8FcX2");
+			conn.setRequestProperty("X-Naver-Client-Id", "ECGnyVl0cYNSGGz2T4yQ");
+			conn.setRequestProperty("X-Naver-Client-Secre", "ypWbpX4tos");
 		
 		//	GET	/ query
 		//							주소?보낼 이름=값&이름=값

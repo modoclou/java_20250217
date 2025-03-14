@@ -22,8 +22,8 @@ public class Network002_news {
 		//#3. 요청설정
 		//	GET(HTTP메서드)
 		conn.setRequestMethod("GET");
-		conn.setRequestProperty("X-Naver-Client-Id", "reu63fdeQl8IXmwLVsRM");
-		conn.setRequestProperty("X-Naver-Client-Secret", "AvEnm8FcX2");
+		conn.setRequestProperty("X-Naver-Client-Id", "ECGnyVl0cYNSGGz2T4yQ");
+		conn.setRequestProperty("X-Naver-Client-Secret", "ypWbpX4tos");
 			
 		//	query / UTF-8로 인코딩		쿼리 스트링 형식 - 요청사항 주소 표시창 줄로 데이터 넘기기
 		//							주소?보낼 이름=값&이름=값
