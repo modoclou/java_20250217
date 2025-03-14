@@ -1,3 +1,11 @@
+#### 19. 2025-03-14
+  1. Thread (Synchronized/공유객체)
+  2. Network
+  3. Stream
+  4. new BufferedReader( new InputStreamReader(new FileInputStream(file)) )
+  5. MySQL
+  6. Consumer / Supplier / Predicate / Function / Operator
+
 #### 18. 2025-03-13
   1. JAVA I/O
   2. Thread
