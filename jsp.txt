@@ -1,0 +1,28 @@
+■1. WEB
+1. WEB
+- TCP/IP 기반으로 연결되어 있는 컴퓨터 네트워크
+- 클라이언트 ↔ 서버 기반
+- 1) web 프로그래밍 (Http 통신)	단방향통신
+      (Client 요청 시 Server가 응답 후 종료)
+- 2) Socket 프로그래밍 (채팅)	양방향통신
+      (특정 port를 통해서 실시간으로 정보를 주고받음 - 계속 연결)
+
+2.WS/WAS
+- WS (Web Server) : 정적 콘텐츠(html,css,js)를 웹 브라우저에 제공
+   예) Apache
+- WAS (Web Application Server) : 동적 콘텐츠
+   브라우저와 dbms 사이에서 동작하는 미들웨어
+   예) Apache + tomcat
+
+3. Tomcat
+>> Http request(요청) > Catalina(실제 요청 처리, 해결사) > Context(네트워크 상의 콘텐츠)
+     > Servlet(java 파일 처리) > response
+
+3-1) http request
+3-2) Coyte가 해결사 찾기: http 요청을 처리할 웹 어플리케이션(context)를
+		         Web.xml 파일의 내용을 참고해서 누가 해결할지 요청을 전달
+3-2) Catalina(Servlet): 해결사
+3-3) Jasper(Jsp Engine): java+html 페이지 요청 처리하고 응답해준다(response)
+3-4) 
+
+C:\Users\tj-bu-703-12\Documents\java_20250217_1\tomcat9.0\apache-tomcat-9.0.95\work\Catalina\localhost\jsp_basic_2\org\apache\jsp

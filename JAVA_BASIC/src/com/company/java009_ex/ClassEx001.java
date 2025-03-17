@@ -25,10 +25,10 @@ public class ClassEx001 {
 ------------------------------------  [runtime data area]
 [method:정보, static, final:공용정보]  Student001.class   /   ClassEx001.class
 ------------------------------------------------------------------------------------------
-[heap:동적]  							    		       |[stack:잠깐빌리기]
-20번째줄 : 1번지 {name=first,no=11, kor=100, eng=100, math=99}   ← s1 :1번지
-19번째줄 : 1번지 {name=null,no=0, kor=0, eng=0, math=0}   ← s1 :1번지
-			    								       | main
+[heap:동적]  							    		       		 |[stack:잠깐빌리기]
+20번째줄 : 1번지 {name=first, no=11, kor=100, eng=100, math=99} ← s1 :1번지
+19번째줄 : 1번지 {name=null, no=0, kor=0, eng=0, math=0}   	 ← s1 :1번지
+			    								       		 | main
 ------------------------------------------------------------------------------------------
 */
 

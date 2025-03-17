@@ -1,0 +1,6 @@
+1. mysql
+2. jsp
+(~2주)
+3. spring & spring boot & mybatis
+4. msa
+(~6일)
