@@ -1,3 +1,7 @@
+#### 20. 2025-03-17
+  1. MYSQL - RDBSM, TABLE, KEY, ALTER TABLE
+  2. JSP - html/css/java - jsp
+
 #### 19. 2025-03-14
   1. Thread (Synchronized/공유객체)
   2. Network
