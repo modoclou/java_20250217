@@ -26,3 +26,30 @@
 3-4) 
 
 C:\Users\tj-bu-703-12\Documents\java_20250217_1\tomcat9.0\apache-tomcat-9.0.95\work\Catalina\localhost\jsp_basic_2\org\apache\jsp
+
+■2. JSP
+1. JSP 기본요소
+- html + java
+
+1) 스크립트 립: <% %> java 코드가 들어가는 곳
+2) 지시자: <%@ %> 
+3) 주석: <%-- --%>
+4) 표현식: <%= %?> 출력구문 출력
+5) 선언: <%! %>
+
+2. FORM
+: 서버로 정보 전달하는 역할
+   action="요청처리"
+   method="요청처리방식" (get, host)
+   name="쿼리스트링 데이터 보관명"
+
+3. 쿼리스트링
+https://www.google.com/search?q=apple&name=sally
+- url 뒤에 입력데이터를 함께 제공하는 데이터 전달방법
+- get 방식으로 데이터를 넘겨준다.
+
+- 클라이언트[#] ↔ 서버
+사용자가 Apple이라고 적으면 서버에서 data를 받을 때
+4. request.getParameter("name값")
+- 클라이언트 ↔ 서버[#]
+- request.getParameter("q")  //apple
