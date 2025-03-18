@@ -11,6 +11,7 @@ public class Class001 {
 		   //com.company.java009.A1@2f92e0f4
 		   System.out.println(a);
 		   A1  a2 = new A1();
+		   System.out.println(a2);		//com.company.java009.A1@71e7a66b
 		   A1  a3 = new A1();
 	}
 }
