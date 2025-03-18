@@ -1,3 +1,7 @@
+#### 21. 2025-03-18
+  1. MYSQL - insert, update, delete
+  2. JSP - JDBC 연동, 주석 확인, 성적처리프로그램
+
 #### 20. 2025-03-17
   1. MYSQL - RDBSM, TABLE, KEY, ALTER TABLE
   2. JSP - html/css/java - jsp
