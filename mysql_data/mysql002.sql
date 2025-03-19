@@ -8,7 +8,7 @@
 	set		필드1 = 값1, 필드2=값2
     where	조건
 */
-
+/*
 create table userinfo(
 	no int not null auto_increment primary key,
     name varchar(100) not null,
@@ -36,6 +36,7 @@ update userinfo set name='second' where no=2 and age=22;
 
 /* - no가 3이고 age가 10인  유저의 이름을 'third' , 나이를 33살로 수정합니다.
 - no가 4이고 name 'first'인  유저의 이름을 'fourth' , 나이를 44살로 수정합니다. */
+/*
 update userinfo set name='third', age=33 where age=10; -- 조건이 안 맞으면 반영 X
 update userinfo set age=33 where  name='third';
 update userinfo set age=44 where  name='fourth';
@@ -77,7 +78,7 @@ update score set semail='hello@gmail.com' where sproject=98;
 	where condition;
 select * from useinfo_delete;
 */
-
+/*
 #3-1 age가 11일 유저 삭제
 delete from userinfo_delete where age=11;
 select * from userinfo_delete;	#ctrl+enter
@@ -252,4 +253,64 @@ insert into salgrade values (4, 2001, 3000);
 insert into salgrade values (5, 3001, 9999);
 
 select * from salgrade;
+*/
+
+use mbasic;
+show tables;
+desc milk;
+select * from milk;
+
+/*
+워크벤치를 열어서 다음과 같이 작업하시오.
+
+Q1. milk 테이블의 구조는 다음과 같다 
+mysql>
+mysql> desc milk;
++--------+-------------+------+-----+---------+------------------+
+| Field  |Type         | Null | Key | Default | Extra            |
++--------+-------------+------+-----+---------+------------------+
+| mno    | int         | NO   | PRI  | NULL   | auto_increment   |
+| mname	 | varchar(20) | NO   |      | NULL   |                  |
+| mprice | int         | NO   |      | NULL   |                  |
++--------+-------------+------+-----+---------+------------------+
+3 rows in set (0.04 sec)
+
+create table milk(
+mno int not null auto_increment primary key,
+mname varchar(20) not null,
+mprice int not null
+);
+
+mysql>
+mysql> select * from milk;
++-----+-------+--------+
+| mno | mname | mprice |
++-----+-------+--------+
+|  1  | white |   1000 |
+|  2  | choco |   1200 |
+|  3  | banana|   1800 | 
++-----+-------+--------+
+6 rows in set (0.03 sec)
+insert into milk value(1, 'white', 1000);
+insert into milk value(2, 'choco', 1200);
+insert into milk value(3, 'banana', 1800);
+
+insert into milk (mname, mprice) value('melon', 5000);
+
+//한줄 실행 ctrl+enter
+//여러 줄 실행 ctrl+shift+enter
+//데이터확인
+select * from milk;
+
+  4 , melon ,  5000 데이터를 추가하시오.
+insert into milk value(4, 'melon', 5000);
+
+ Q2.  no가 4번인 데이터의 mprice를 1500로 변경하시오.
+update milk set mprice=1500 where no=4;
+
+ Q3.  no가 4번이고 name이 melon인데이터를 삭제하시오.
+delete from milk where mno=4 and mname='melon';
+
+ Q4.  milk 데이터를 출력하시오.
+select * from milk;
 */
