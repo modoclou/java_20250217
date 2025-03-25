@@ -1,0 +1,42 @@
+<%@page import="java.sql.*"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+	request.setCharacterEncoding("UTF-8");
+	//1. 데이터값 넘겨받기
+	String name = request.getParameter("name");
+	String pass = request.getParameter("pass");
+	
+	//2. 드라이버 연동
+	//3. db 연동
+	Connection conn = null;	PreparedStatement pstmt = null;	ResultSet rset = null;
+	String sql = "select count(*) from member where name=? and pass=?";
+	int result = -1;
+	try{
+		Class.forName("com.mysql.cj.jdbc.Driver");
+		conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/mbasic", "root", "1234");
+		//if(conn!=null) out.println("db성공");
+		pstmt = conn.prepareStatement(sql);
+		pstmt.setString(1, name);
+		pstmt.setString(2, pass);
+		rset = pstmt.executeQuery(); //표
+		if(rset.next()){result=rset.getInt("cnt");} //줄, 칸
+		
+		if(result==1){
+			request.getRequestDispatcher("jsp022_my.jsp").forward(request, response);
+			session.setAttribute("username", name); //세션정보유지하기 # 
+		} else{
+			out.println("<script>alert('정보를 확인해주세요.'); history.go(-1); </script>");
+		}
+		//4. sql처리 select count(*) from member where name=? and pass=?
+		//5. 결과값 처리
+		// 찾았으면 [경로안바뀌게] , 보이는 화면은 jsp022_my.jsp 페이지로 넘어가기 / 
+		// 못찾았으면 정보를 확인해주세요~ 알림창띄우고 로그인페이지로  jsp022_login.jsp 페이지
+	} catch(Exception e){e.printStackTrace();
+	} finally{
+		if(rset!=null){rset.close();}
+		if(pstmt!=null){pstmt.close();}
+		if(conn!=null){conn.close();}
+	}
+	
+%>

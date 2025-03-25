@@ -1,0 +1,70 @@
+■진행1. CRUD (SELECT Subquery)
+[실습] 다음과 같이 데이터를 준비하시오
+mysql> desc sub_userinfo;
++-------+-------------+------+-----+---------+----------------+
+| Field | Type        | Null | Key | Default | Extra          |
++-------+-------------+------+-----+---------+----------------+
+| no    | int(11)     | NO   | PRI | NULL    | auto_increment |
+| name  | varchar(20) | NO   |     | NULL    |                |
+| age   | int(11)     | NO   |     | NULL    |                |
+| sex   | char(2)     | YES  |     | NULL    |                |
+| kor   | int(11)     | YES  |     | NULL    |                |
+| eng   | int(11)     | YES  |     | NULL    |                |
+| math  | int(11)     | YES  |     | NULL    |                |
+| ban   | char(2)     | YES  |     | NULL    |                |
+| sns   | char(2)     | YES  |     | y       |                |
++-------+-------------+------+-----+---------+----------------+
+
+use mbasic;
+create table sub_userinfo(
+	no int(11) not null auto_increment primary key,
+	name varchar(20) not null,
+	age int(11) not null,
+	sex char(2),
+	kor int(11),
+	eng int(11),
+	math int(11),
+	ban char(2),
+	sns char(2) default y
+);
+
+/* 
+1. 서브쿼리
+- select 구문 안에 select 구문
+- 서브쿼리 결과가 하나 이상 반환 시 in, any, all 사용(1개일 땐 =)
+
+2. 형식
+select 컬럼 from 테이블 where 컬럼 in ( select 문 );
+
+#1-1. 평균나이 이상인 레코드를 추출하시오.
+-- select * from sub_userinfo where age >= 평균나이
+#1-2. 평균나이
+select avg(age) from sub_userinfo;
+#1-3. 1+3
+select * from sub_userinfo where age >= (select avg(age) from sub_userinfo);
+
+
+mysql> select * from sub_userinfo;
++----+--------+-----+------+------+------+------+------+------+
+| no | name   | age | sex  | kor  | eng  | math | ban  | sns  |
++----+--------+-----+------+------+------+------+------+------+
+|  1 | first  |  11 | NULL |  100 |  100 |   99 | A    | n    |
+|  2 | second |  22 | m    |   89 |   92 |   78 | B    | y    |
+|  3 | third  |  33 | m    |   90 |   92 |   97 | A    | y    |
+|  4 | fourth |  44 | f    |   40 |   42 |   67 | C    | n    |
+|  5 | fifth  |  55 | f    |   89 |   86 |   99 | B    | y    |
+|  6 | sixth  |  66 | m    |   10 |   20 |   44 | C    | n    |
++----+--------+-----+------+------+------+------+------+------+
+
+6 rows in set (0.00 sec)
+
+desc sub_userinfo;
+
+select * from sub_userinfo;
+
+insert into sub_userinfo values (1, 'first', 11, null, 100, 100, 99, 'A', 'n');
+insert into sub_userinfo values (2, 'second', 22, 'm', 89, 92, 78, 'B', 'y');
+insert into sub_userinfo values (3, 'third', 33, 'm', 90, 92, 97, 'A', 'y');
+insert into sub_userinfo values (4, 'fourth', 44, 'f', 40, 42, 67, 'C', 'n');
+insert into sub_userinfo values (5, 'fifth', 55, 'f', 89, 86, 99, 'B', 'y');
+insert into sub_userinfo values (6, 'sixth', 66, 'm', 10, 20, 44, 'C', 'n');
