@@ -1,3 +1,12 @@
+#### 26. 2025-03-25
+  1. subquery, 내장객체
+
+#### 25. 2025-03-24
+  1. 2h, absence
+
+#### 23, 24. 2025-03-20~21
+  1. condition absence
+
 #### 22. 2025-03-19
   1. MYSQL - select, basic(where 이용한 select 필터기능)
   2. JSP - JDBC 연동, Statement-PreparedStatement
