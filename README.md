@@ -1,3 +1,7 @@
+#### 22. 2025-03-19
+  1. MYSQL - select, basic(where 이용한 select 필터기능)
+  2. JSP - JDBC 연동, Statement-PreparedStatement
+
 #### 21. 2025-03-18
   1. MYSQL - insert, update, delete
   2. JSP - JDBC 연동, 주석 확인, 성적처리프로그램
