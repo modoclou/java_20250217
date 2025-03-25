@@ -14,11 +14,13 @@
 <body>
 	<div class="container card bg-light my-5">
 	<div class="my-5"><%=session.getAttribute("username")%></div>
-		<h3 class="card-header">MY INFO</h3>
+		<h3 class="card-header bg-info text-white">MY INFO</h3>
 		<table class="table table-striped table-bordered">
 		<caption>MY INFO</caption>
 		<tbody>
-		
+			<tr><th scope="row">NO</th><td></td></tr>
+			<tr><th scope="row">NAME</th><td></td></tr>
+			<tr><th scope="row">PASS</th><td></td></tr>
 		</tbody>
 		</table> 
 	</div>
