@@ -58,6 +58,7 @@ public class jsp025_join extends HttpServlet {
 		} catch(SQLException e) {e.printStackTrace();
 		} finally {
 			if(pstmt!=null){ try {pstmt.close();} catch (SQLException e) {e.printStackTrace();}}
+			if(rset!=null){ try {rset.close();} catch (SQLException e) {e.printStackTrace();}}
 			if(conn!=null){ try {conn.close();} catch (SQLException e) {e.printStackTrace();}}
 		}
 		//4. 경로처리
