@@ -2,13 +2,13 @@
     pageEncoding="UTF-8"%>
 <!-- login.jsp -->
 <!-- login.jsp -->
-<%@ include   file="jsp022_header.jsp" %>
+<%@ include   file="jsp025_header.jsp" %>
 
 
 <div class="container card  my-5">
 	<h3 class="card-header mb-3"> LOGIN </h3> 
 	<p style="text-align:center; "><img src="img/login.png" alt="login"/></p>  
-	<form action="jsp022_login_action.jsp"  method="post"  onsubmit="return  form()">
+	<form action="jsp025_login_action.jsp"  method="post"  onsubmit="return  form()">
 		<div class="my-3">
 			<label for="name"   class="form-label">아이디 </label>
 			<input type="text"  class="form-control"  id="name"  name="name" />      
@@ -39,7 +39,7 @@
 </div>
 
 
-<%@ include file="jsp022_footer.jsp" %>
+<%@ include file="jsp025_footer.jsp" %>
 
  
  

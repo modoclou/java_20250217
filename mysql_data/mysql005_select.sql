@@ -149,3 +149,6 @@ select num from atest where num < all(select num from atest where num in(3,4,5))
 -- 최대값보다 크다 (all #) 5보다 크다 -> 결과값 6
 select num from atest where num > all(select num from atest where num in(3,4,5)) order by num;
 
+use mbasic;
+select * from member;
+delete from member where no='8';
