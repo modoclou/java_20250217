@@ -1,0 +1,25 @@
+■PART002
+#1. frontcontroller boaed 게시판완성
+#2. 개발사이트 api + ajax
+#3. [숙제] - api 2개이상 / upgrade 기능업그레이드
+
+1) dynamix web project - JOABooks
+2) inc = header/footer
+3) error page 설정 - 404, 500
+4) dbcp 연동
+
+[com.company.controller] - [FrontController]   *.do
+
+[클라이언트 요청]   
+↓
+index.jsp  ->  *.do   [FrontController]
+       ㄴ  /list.do           - C:전체리스트        BList        /      V:list.jsp 
+       ㄴ  /write_view.do - C:X                                          V:write.jsp 
+       ㄴ  /write.do        - C:글삽입             BWrite(알림창- 성공/실패) /   V: /list.do
+       ㄴ  /detail.do      - C:해당번호 상세보기  BDetail(조회수올리기/해당글상세)
+                                      V:detail.jsp
+       ㄴ  /edit_view.do  - C:해당번호 글수정폼  BEditView(해당글상세)
+                                      V:edit.jsp
+       ㄴ  /edit.do       - C:해당번호 글수정기능 BEdit(해당글수정)
+                                      V: /detail.do 
+       ㄴ  /delete.do     - C:해당번호 글삭제기능 BDelete(해당글삭제)      V: /list.do

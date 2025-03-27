@@ -1,0 +1,34 @@
+Q1. mvc 란?
+model view controller
+- 서로 영향 없이 쉽게 고칠 수 있는 애플리케이션
+
+Q2. mvc1 vs  mvc2 란?
+- mvc1: controller 역할을 jsp가 담당
+- mvc2: controller 역할을 servlet이 담당
+
+Q3. DBCP란?
+DataBase C P
+- 분산 응용 프로그램
+- db 커넥션 객체를 미리(pool)에 생성해 두고 사용
+- 데이터베이스 과부하 줄이기
+
+Q4. jsp는   ( java )  + ( html )    
+     mvc에서의 역할은?	view
+
+Q5.  servlet 은  ( java ) 
+     mvc에서의 역할은?	controller
+
+Q6. DBCP를 설정하는 방법을 설명하시오.
+1. jar 3개 다운로드 - dbcp, collections, pool
+2. Server - [server.xml] pool 설정 <Resource/>
+3. 진행프로젝트- [webapp] - [WEB-INF] - web.xml <resource-ref>
+4. test파일
+
+Q7.  dynamic web project에서 jsp 가 위치하는 영역은  ( webapp )   , servlet이 위치하는 영역은 ( java resource ) , 라이브러리들 .jar 파일들이 들어가는위치는 (  WEB-INF  ) 
+
+Q8.  request가 오면 (    )  파일을 참고해서 controller를 찾는다.
+
+Q9.  로그인 후 id를 유지하려고하면 (  session.setAttribute("username", name)  )  를 이용한다.
+      셋팅이름은  username , 값은 name변수로  지정하시오.
+
+Q10.  application scope의 범위를 적으시오.

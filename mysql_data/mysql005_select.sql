@@ -152,3 +152,57 @@ select num from atest where num > all(select num from atest where num in(3,4,5))
 use mbasic;
 select * from member;
 delete from member where no='8';
+
+create table board(
+bno int not null auto_increment primary key,
+btitle varchar(1000) not null,
+bcontent text not null,
+bname varchar(100) not null,
+bhit int not null default '0',
+bdate timestamp not null default current_timestamp,
+bip varchar(100) not null
+);
+/*
+update board set bip varchar(100) not null;
+update board set bno int not null auto_increment primary key;
+update board set btitle varchar(1000) not null;
+update board set bcontent text not null;
+update board set bname varchar(100) not null;
+update board set bhit int not null default '0';
+update board set bdate timestamp not null default current_timestamp;
+update board set bip varchar(100) not null; */
+
+drop table board;
+desc board;
+select * from board;
+
+/*
+.....................................................................
+Dto -[com.company.domain] - BoardVO
+DBManager -[com.company.dbmanager] - DBManager
+Dao -[com.company.dao] - BoardDao
+.....................................................................
+참고1)
+executeQuery - select (표의 형식 리턴)
+executeUpdate - insert, update, delete (실행줄수)
+참고2)
+리턴값 메서드명() {파라미터}
+
+1. 글쓰기 - insert into board (btitle, bcontent, bname, bip) values (?, ?, ?, ?)
+	public int(실행줄수) insert(BoardVO vo) {return 0; int result}
+    
+2. 최신글읽기 - select * from board order by bno desc
+	public ArrayList<BoardVO> selectAll(){return null;}
+    
+3. 해당글읽기/해당글수정폼 - select * from board where bno = ?
+	public BoardVO select(int bno){return null;}
+    
+4. 조회수증가 - update board set bhit=bhit+1 where bno = ?
+	public int updateHit(int bno){return 0;}
+
+5. 해당글수정기능 - update board set btitle=?, bcontent=? where bno = ?
+	public int update(BoardVO vo){return 0;}
+
+6. 해당글삭제 - delete from board where bno=?
+	public int delete(int bno){return 0;}
+*/

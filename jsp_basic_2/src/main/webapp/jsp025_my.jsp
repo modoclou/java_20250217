@@ -4,8 +4,8 @@
 <!-- my.jsp -->
 <!-- my.jsp -->
 
-<div class="container card  bg-success my-5">
-	<h3 class="card-header  bg-success text-white"> MY INFO </h3>
+<div class="container card  bg-info my-5">
+	<h3 class="card-header  bg-info text-white"> MY INFO </h3>
 	<table  class="table table-striped table-bordered">
 		<caption> MYINFO</caption>
 		<tbody>

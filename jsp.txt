@@ -138,3 +138,57 @@ Context initContext = new InitialContext();
 Context envContext  = (Context)initContext.lookup("java:/comp/env");
 DataSource ds = (DataSource)envContext.lookup("jdbc/myoracle");
 Connection conn = ds.getConnection();
+
+.....................................................................
+Dto -[com.company.domain] - BoardVO
+DBManager -[com.company.dbmanager] - DBManager
+Dao -[com.company.dao] - BoardDao
+.....................................................................
+참고1)
+executeQuery - select (표의 형식 리턴)
+executeUpdate - insert, update, delete (실행줄수)
+참고2)
+리턴값 메서드명() {파라미터}
+
+1. 글쓰기 - insert into board (btitle, bcontent, bname, bip) values (?, ?, ?, ?)
+	public int(실행줄수) insert(BoardVO vo) {return 0; int result}
+    
+2. 최신글읽기 - select * from board order by bno desc
+	public ArrayList<BoardVO> selectAll(){return null;}
+    
+3. 해당글읽기/해당글수정폼 - select * from board where bno = ?
+	public BoardVO select(int bno){return null;}
+    
+4. 조회수증가 - update board set bhit=bhit+1 where bno = ?
+	public int updateHit(int bno){return 0;}
+
+5. 해당글수정기능 - update board set btitle=?, bcontent=? where bno = ?
+	public int update(BoardVO vo){return 0;}
+
+6. 해당글삭제 - delete from board where bno=?
+	public int delete(int bno){return 0;}
+
+
+[com.company.controller] - [FrontController]   *.do
+
+[클라이언트 요청]   
+↓
+index.jsp  ->  *.do   [FrontController]
+       ㄴ  /list.do           - C:전체리스트        BList        /      V:list.jsp 
+       ㄴ  /write_view.do - C:X                                          V:write.jsp 
+       ㄴ  /write.do        - C:글삽입             BWrite(알림창- 성공/실패) /   V: /list.do
+       ㄴ  /detail.do      - C:해당번호 상세보기  BDetail(조회수올리기/해당글상세)
+                                      V:detail.jsp
+       ㄴ  /edit_view.do  - C:해당번호 글수정폼  BEditView(해당글상세)
+                                      V:edit.jsp
+       ㄴ  /edit.do       - C:해당번호 글수정기능 BEdit(해당글수정)
+                                      V: /detail.do 
+       ㄴ  /delete.do     - C:해당번호 글삭제기능 BDelete(해당글삭제)      V: /list.do
+
+http://localhost:8080/JOABooks/list.do
+http://localhost:8080/JOABooks/write_view.do
+http://localhost:8080/JOABooks/write.do
+http://localhost:8080/JOABooks/detail.do
+http://localhost:8080/JOABooks/edit_view.do
+http://localhost:8080/JOABooks/edit.do
+http://localhost:8080/JOABooks/delete.do
