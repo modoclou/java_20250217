@@ -30,7 +30,7 @@
 				<tbody>
 					<tr>
 					<td>1</td>
-					<td><a href="detail.jsp">첫번째 게시글입니다.</a></td>
+					<td><a href="detail.do">첫번째 게시글입니다.</a></td>
 					<td>ADMIN</td>
 					<td>2020-01-02 13:14:39</td>
 					<td>0</td>
@@ -38,7 +38,7 @@
 				</tbody>
 			</table>
 		</div>
-		<p><a href="../board/write.jsp" class="btn btn-info text-white" style="margin-top: 10px;">글쓰기</a></p>
+		<p><a href="list.do" class="btn btn-info text-white" style="margin-top: 10px;">글쓰기</a></p>
 	</div>
 <%@ include file="../inc/footer.jsp" %>
 </body>

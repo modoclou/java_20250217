@@ -13,7 +13,7 @@ public class Network003_book {
 		//	https://openapi.naver.com/v1/search/news.xml	xml
 		//	https://openapi.naver.com/v1/search/news.json	json
 		String apiurl="https://openapi.naver.com/v1/search/book.xml?query="
-						+ URLEncoder.encode("사람은 무엇으로 사는가", "UTF-8");
+						+ URLEncoder.encode("이방인", "UTF-8");
 			URL url = new URL(apiurl);
 		
 		//#2. HttpURLConnection

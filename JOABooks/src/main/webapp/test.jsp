@@ -26,15 +26,16 @@
 		<%
 		BoardDao dao = new BoardDao();
 		//6. delete
-		System.out.println(dao.delete(9)); //1
-		System.out.println(dao.select(9)); //1		
+//		System.out.println(dao.delete(9)); //1
+//		System.out.println(dao.select(9)); //1		
 		//5. update
-		/*
 		BoardVO vo = new BoardVO();
 		vo.setBtitle("제목");
 		vo.setBcontent("내용");
+		vo.setBname("first");
+		System.out.println(dao.insert(vo)); //1
 		vo.setBno(9);
-		*/
+		
 		//4. updateHit
 		//System.out.println(dao.updateHit(9)); //1 성공, -1 실패
 		//3. select

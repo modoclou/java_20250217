@@ -30,9 +30,9 @@
 		</div>
 	</div>
 	<div class="text-end">
-		<a href="" class="btn btn-info text white">수정</a>
-		<a href="" class="btn btn-outline-danger">삭제</a>
-		<a href="" class="btn btn-outline-info">목록보기</a>
+		<a href="" class="btn btn-info text white" style="display:block; width:100%">수정</a>
+		<a href="" class="btn btn-outline-danger" style="display:block; width:100%">삭제</a>
+		<a href="" class="btn btn-outline-info" style="display:block; width:100%">목록보기</a>
 	</div>
 </div>
 <%@ include file="../inc/footer.jsp" %>
