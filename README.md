@@ -1,3 +1,9 @@
+#### 28. 2025-03-27
+  1. JSP - EL?JSTL + FrontController Board
+
+#### 27. 2025-03-26
+  1. JSP - select-basic, el/jstl
+
 #### 26. 2025-03-25
   1. subquery, 내장객체
 
