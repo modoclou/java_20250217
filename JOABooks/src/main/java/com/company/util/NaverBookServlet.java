@@ -42,7 +42,7 @@ public class NaverBookServlet extends HttpServlet {
 			//		https://openapi.naver.com/v1/search/book.xml	XML
 			//		https://openapi.naver.com/v1/search/book.json	JSON
 			String apiurl = "https://openapi.naver.com/v1/search/book.json?query="
-							+ URLEncoder.encode("데미안" , "UTF-8");
+							+ URLEncoder.encode("나르치스와 골드문트" , "UTF-8");
 			URL url = new URL(apiurl);
 			//#2. HttpURLConnection
 			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
