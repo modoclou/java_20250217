@@ -1,5 +1,8 @@
+#### 29. 2025-03-28
+  1. JSP - EL ${}/JSTL $() + FrontController Board
+
 #### 28. 2025-03-27
-  1. JSP - EL?JSTL + FrontController Board
+  1. JSP - EL/JSTL + FrontController Board
 
 #### 27. 2025-03-26
   1. JSP - select-basic, el/jstl
