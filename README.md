@@ -1,3 +1,8 @@
+#### 30. 2025-03-31
+  1. SPRING - ioc+di / bean
+  2. ioc+di(@Test, @Ignore / property, constructor, properties) $list
+  3. bean(@Autowired, @Qualifier, @Component, @Controller, @Service, @Repository, @Resource, @Value)
+
 #### 29. 2025-03-28
   1. JSP - EL ${}/JSTL $() + FrontController Board
 
