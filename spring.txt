@@ -236,3 +236,153 @@ public class AnimalFarm2 {
     4. java se-11 / (properties-fac)project facts, build path
     5. build path - add Library - JUnit 4
     6. pom.xml 셋팅 > junit, context, spring-test	■[프로젝트 만들기]
+
+
+
+===============================
+#4. DB / MYBATIS
+===============================
+▶1. DataSource
+SimpleDriverDataSource 가장 단순한 버전
+- getConnection() 매번 생성
+
+> mysql-connector-java / spring-jdbc
+<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+<dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>8.0.28</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-jdbc</artifactId>
+    <version>4.3.20.RELEASE</version>
+</dependency>
+
+▶2. Mybatis
+1. sql을 별도로 파일 분리해서 관리해줌
+2. ORM(object relational mapping) 프레임워크
+3. mybatis
+==========================
+1. SqlSessionFactoryBean
+            ↓
+2. SqlSessionFactory → <<SqlSession>> → mapper.xml
+		         (insert, update, delete, select...)
+※SqlSessionFactory SqlSession 생성관리
+SqlSession: Sql실행, 트랜잭션(일련의 과정)
+==========================
+4. 실습
+ mybatis
+ mybatis-spring
+
+   <!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
+   <dependency>
+       <groupId>org.mybatis</groupId>
+       <artifactId>mybatis</artifactId>
+       <version>3.5.6</version>
+   </dependency>
+   <!-- https://mvnrepository.com/artifact/org.mybatis/mybatis-spring -->
+   <dependency>
+       <groupId>org.mybatis</groupId>
+       <artifactId>mybatis-spring</artifactId>
+       <version>2.0.6</version>
+   </dependency>
+
+5. 설정파일
+   ## mapper 설정파일(1)
+   [Preferences] - [Xml] - Templates - New - New XML
+   <?xml version="1.0" encoding="UTF-8" ?>
+   <!DOCTYPE mapper
+     PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+     "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+   <mapper namespace="org.mybatis.example.BlogMapper">
+   </mapper>
+   
+   ## mapper 설정파일(2)  
+   [Preferences] - [Xml] - Templates - New - New XML
+   <?xml version="1.0" encoding="UTF-8" ?>
+   <!DOCTYPE configuration
+     PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+     "https://mybatis.org/dtd/mybatis-3-config.dtd">
+   <configuration>
+   </configuration>
+
+
+mysql> desc userinfo;
++-------+--------------+------+-----+---------+-----------------+
+| Field   | Type           | Null  | Key  | Default  | Extra              |
++-------+--------------+------+-----+---------+-----------------+
+| no      | int             | NO   | PRI   | NULL    | auto_increment |
+| name  | varchar(100) | NO    |       | NULL    |                     |
+| age    | int             | NO    |       | NULL    |                     |
++-------+--------------+------+-----+---------+-----------------+
+3 rows in set (0.05 sec)
+
+insert:
+insert into userinfo value (5, 'fifth', 28);
+insert into userinfo (name, age) values (?,?);
+select: 
+- 해당 번호 검색: select * from userinfo where no='5';
+- 전체 검색: select * from userinfo;
+update:
+해당 번호의 이름과 나이 수정: update userinfo set name='sixft', age='60' where no='5';
+delete:
+해당번호 삭제: delete from userinfo where no='5';
+
+7-2. Dto (UserDto)
+ [com.company.dto] - UserDto
+  private int no;
+  private String name;
+  private int age;
+
+  //생성자, toString, getters/setters
+
+  [confug\\iig] - mybatis-confg.xml	mapper에서 사용할 UserDto 등록
+
+7-3. Dao (UserDao, UserDaoImpl, user-mapper)
+
+
+▶3.  Mybatis  ex
+    1. dynamic web project - spring005_ex_board
+    2. configure  - [Convert to Maven Project]
+    3. spring      - add Spring project Nature
+    4. java se-11 / project facts, build path
+    5. build path - add Libraries - JUnit 4       
+    6. pom.xml 셋팅   > junit, context, spring-test      ■[프로젝트만들기]
+
+Q1. spring project spring005_ex_board만들기
+Q2. Datasource를 셋팅하고 
+     db.properties를 이용하여   datasource를 연동하시오 > SimpleDriverDataSource
+Q3. Mybatis를 셋팅하고 
+     다음 테이블의 crud를 테스트하시오.
+ [com.company.dto]  - BoardDto	                   mybatis-config.xml
+ [com.company.dao] - BoardDao  /  BoardDaoImpl /  board-mapper.xml 
+
+use mbasic;
+desc sboard;
+create table sboard(
+bno int not null auto_increment primary key,
+bname varchar(100) not null,
+bpass varchar(50) not null,
+btitle varchar(1000) not null,
+bcontent text not null,
+bdate timestamp not null default current_timestamp,
+bhit int not null default 0,
+bip varchar(50) not null
+);
+
+mysql> desc sboard;
++----------+---------------+------+-----+-------------------+-------------------+
+| Field   	  | Type 	         | Null   | Key  | Default        	  | Extra   	  |
++----------+---------------+------+-----+-------------------+-------------------+
+| bno	  | int	         | NO    | PRI  | NULL		  | auto_increment   |
+| bname    | varchar(100)  | NO    |       | NULL		  |		  |
+| bpass	  | varchar(50)    | NO    |	  | NULL		  |		  |
+| btitle	  | varchar(1000) | NO    |	  | NULL		  |		  |
+| bcontent | text	         | NO    |	  | NULL		  |		  |
+| bdate	  | timestamp    | NO    |	  | CURRENT_TIMESTAMP | DEFAULT_GENERATED |
+| bhit	  | int	         | NO    |	  | 0		  |		  |
+| bip	  | varchar(50)    | NO    |	  | NULL		  |		  |
++----------+---------------+------+-----+-------------------+-------------------+
+8 rows in set (0.00 sec)

@@ -40,4 +40,6 @@ public class JUnittest001 {
 		//
 		assertSame(area1, area2);
 	}
+	//1. 스프링이 관리한다.
+	//2. 싱글톤 - 한번 생성, 전역 사용 → 효율적인 리소스 관리(spring)
 }
