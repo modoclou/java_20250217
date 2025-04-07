@@ -206,3 +206,17 @@ executeUpdate - insert, update, delete (실행줄수)
 6. 해당글삭제 - delete from board where bno=?
 	public int delete(int bno){return 0;}
 */
+
+use myboot;
+show tables;
+desc member;
+
+
+
+create table member(
+id bigint not null primary key auto_increment,
+date datetime(6),
+name varchar(255),
+age int);
+
+update member set name='create_date' where name='date';

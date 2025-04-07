@@ -1,0 +1,32 @@
+■ STEP1. project
+   - enc UTF0\-8
+   - project
+spring-dev 프로젝트 수정된 내용 반영
+   연습) boot002 project 만들기
+■ STEP2. setting (properties)
+■ STEP3. db연동
+	- jpa
+	1) application.properties
+	2) @Entuty - Dto 테이블 만들기
+	3) @Repository - Dao
+- ex)
+	1) @Entity 이용해서 Member 테이블 만들기
+	2) @Repository 이용해서 MemberRepository
+■ STEP4. view
+1. pom.xml 셋팅 확인
+2. applicatrion.properties 설정 확인
+3. layout
+4. 화면 설정
+
+연습) boot002 테스트
+	1. pom.xml 설정
+	2. application.properties 셋팅
+	3. fragments 폴더 안에 : bootstrap에서 원하는 nav 선택 - header.html
+	4. fragments 폴더 안에 : footer.html 설정
+	5. fragments 폴더 안에 : layout 설정
+	6. test.html 파일 만들어서 layout 나오는지 확인
+	http://localhost:8181/boot2/test2
+
+■ STEP5. board
+
+■ STEP6. security

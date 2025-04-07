@@ -1,0 +1,10 @@
+    0. https://mvnrepository.com/artifact/org.projectlombok/lombok
+    1. https://projectlombok.org/download
+    2. 다운로드
+    3. 더블클릭 /   cmd창     java  -jar    파일이름.jar
+        설치경로 설정
+    4. spring 다시 열기
+
+    ※ 만약 인식이 안되면....
+      1. C드라이브로 스프링zip. 옮기기 - 압축풀기
+      2. 경로 짧게
