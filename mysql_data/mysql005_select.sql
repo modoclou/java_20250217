@@ -162,6 +162,7 @@ bhit int not null default '0',
 bdate timestamp not null default current_timestamp,
 bip varchar(100) not null
 );
+
 /*
 update board set bip varchar(100) not null;
 update board set bno int not null auto_increment primary key;

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<!-- Q1. CalcRectangle rect = new CalcRectengle(); -->
+	<bean id="rect" class="com.company.iotest.CalcRectangle"/>
+	<!-- Q2. CalcTriangle tri = new CalcTriangle(); -->
+	<bean id="tri" class="com.company.iotest.CalcTriangle"/>
+	<!-- Q3. MyArea myarea - new MyArea(); -->
+	
+	//@Test
+	@Ignore
+	public void test1() {
+		Calc calc = context.getBean("rect", Calc.class);
+		Calc calc2 = (Calc) context.getBean("tri");
+		MyArea MyArea = context.getBean("MyArea", MyArea.class);
+		//사용방법 : assertEquals("예상값", "처리할 값");
+		assertEquals("sally>15.0", MyArea.mycalc(10,3));
+	}
+	
+	//@Test
+	@Ignore
+	public void test2() {
+		MyArea area1 = context.getBean("MyArea", MyArea.class);
+		MyArea area2 = context.getBean("MyArea", MyArea.class);
+		//사용방법2 : assertSame(area1, area2);
+		//
+		assertSame(area1, area2);
+	}
+	
+	@Test @Ignore
+	<bean id="MyArea" class="com.company.iotest.MyArea">
+		<constructor-arg index=0 value="alpaa></constructor-arg>
+		//<constructor-arg  index(); values();></constructor-arg>
+		<property name="name" value="sally"></property>
+		<property name="calc" ref="rect"></property>
+	</bean>
+</beans>
