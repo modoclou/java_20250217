@@ -1,3 +1,6 @@
+#### 31. 2025-04-01
+  1. SPRING - AOP/DB TRANSACTION
+
 #### 30. 2025-03-31
   1. SPRING - ioc+di / bean
   2. ioc+di(@Test, @Ignore / property, constructor, properties) $list
