@@ -1351,3 +1351,8 @@ SPRING/spring005_ex_board/target/m2e-wtp/web-resources/META-INF/maven/spring005_
 SPRING/spring005_ex_board/target/test-classes/spring005_ex_board/test1.class
 SPRING/spring005_ex_board/target/test-classes/spring005_ex_board/Test2_BoardDao.class
 >>>>>>> main
+SPRING/boot003/.gitattributes
+SPRING/boot003/.gitignore
+SPRING/boot003/mvnw
+SPRING/boot003/mvnw.cmd
+SPRING/boot003/.mvn/wrapper/maven-wrapper.properties

@@ -10,8 +10,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import com.cyj.boot001.myjpa.Member;
 import com.cyj.boot001.myjpa.MemberRepository;
-import com.cyj.boot001.myjpa.Team;
-import com.cyj.boot001.myjpa.TeamRepository;
 
 
 @SpringBootTest

@@ -1,4 +1,4 @@
-package com.thejoa.boot001.dto;
+package com.cyj.boot001.dto;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

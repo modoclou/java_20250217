@@ -29,4 +29,13 @@ spring-dev 프로젝트 수정된 내용 반영
 
 ■ STEP5. board
 
+5. df
+
+6. @
+
+7. @Service
+1) 패키지명.board - BoardService
+
+8. view
+
 ■ STEP6. security

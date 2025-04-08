@@ -14,8 +14,8 @@ class Boot002ApplicationTests {
 	
 	@Test void insert() {
 		Team team = new Team();	
-		team.setName('milks'); //fruits, animal)
-		teamRepository.seav(team);
+		team.setName("milk"); //fruits, animal)
+		teamRepository.save(team);
 	}
 	void contextLoads() {
 	}

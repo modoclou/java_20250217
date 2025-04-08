@@ -30,7 +30,7 @@
 	
 	@Test @Ignore
 	<bean id="MyArea" class="com.company.iotest.MyArea">
-		<constructor-arg index=0 value="alpaa></constructor-arg>
+		<constructor-arg index=0 value="alpaa"></constructor-arg>
 		//<constructor-arg  index(); values();></constructor-arg>
 		<property name="name" value="sally"></property>
 		<property name="calc" ref="rect"></property>
