@@ -1,4 +1,4 @@
-package com.cyj.boot004.member;
+package com.cyj.boot4.board;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
