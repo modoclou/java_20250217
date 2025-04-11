@@ -1,3 +1,7 @@
+#### 39. 2025-04-11
+  1. SPRING 1Day 1board
+  3. ERD Team Project progress (book api, figma design)
+
 #### 38. 2025-04-10
   1. SPRING
   2. security(login ↔ board)
