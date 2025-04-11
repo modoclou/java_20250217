@@ -1,4 +1,4 @@
-package com.cyj.boot001.myjpa;
+package com.thejoa.boot001.myjpa;
 
 import java.time.LocalDateTime;
 import java.util.HashSet;
@@ -42,8 +42,9 @@ public class Member {
 	// 멤버(iron, hulk,thor,,,,,)는 하나의 팀을 가진다.
 	// team_id  컬럼 자동으로 생김
 	
-	@ManyToMany
-	private Set<ChatRoom> chatRooms = new HashSet<>();
+	@ManyToMany(mappedBy="members") 
+	private Set<ChatRoom>  chatRooms = new HashSet<>();
+	
 }
 /*
 관계1

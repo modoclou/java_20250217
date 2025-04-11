@@ -1425,3 +1425,8 @@ SPRING/boot5_board_security/.gitignore
 SPRING/boot5_board_security/mvnw
 SPRING/boot5_board_security/mvnw.cmd
 SPRING/boot5_board_security/.mvn/wrapper/maven-wrapper.properties
+SPRING/boot_board1/.gitattributes
+SPRING/boot_board1/.gitignore
+SPRING/boot_board1/mvnw
+SPRING/boot_board1/mvnw.cmd
+SPRING/boot_board1/.mvn/wrapper/maven-wrapper.properties
