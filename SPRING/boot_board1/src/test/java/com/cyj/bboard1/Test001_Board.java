@@ -11,6 +11,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import com.cyj.bboard1_board.Board;
 import com.cyj.bboard1_board.BoardRepository;
+import com.cyj.boot3.member.Member;
 
 @SpringBootTest
 public class Test001_Board {
@@ -19,16 +20,20 @@ public class Test001_Board {
 	
 	@Test
 	public void insertBoard() {
+		for(i=0; i<=130; i++) {
+		Member member = new Member();
+		member.setUsername("test");
 		Board board = new Board();
-		board.setBtitle("title-2");
-		board.setBcontent("content-2");
+		board.setBtitle("title-paging");
+		board.setBcontent("content-paging");
 		board.setBpass("1111");
 		board.setBfile("2.jpg");
 		try {
 			board.setBip(InetAddress.getLocalHost().getHostAddress());
 		} catch (Exception e) { e.printStackTrace(); }
-		
+		board.setMember(member);
 		boardRepository.save(board);
+		}
 	}
 	
 	@Disabled @Test

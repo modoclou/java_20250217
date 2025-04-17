@@ -1,0 +1,29 @@
+[책 데이터 관리]
+
+[필요한 데이터]
+user: no, id, password, username, datetime
+BookVO: title, link, image, author, price, publisher, pubdate, isbn, description (제목, 책 링크, 표지 이미지, 저자, 가격, 출판사, 출간일, ISBN 분류코드, 책 소개문(네이버 기준))
+기타: [USER] - age, email, datetime
+
+
+[ADMIN]
+
+create 책데이터등록
+insert into bookdata (title, link, image, author, price, publisher, pubdate, isbn, description) values (?, ?, ?, ?, ?, ?, ?, ?, ?)
+
+read 전체책데이터확인, 상세데이터확인
+select * from bookdata
+select * from bookdata where title=?
+
+update 책데이터수정
+update bookdata set title=?, link=?, image=?, author=?, price=?, publisher=?, pubdate=?, isbn=?, description=? where no=? and title=?
+
+delete 책데이터삭제
+delete from bookdata where title=? 
+
+
+[USER]
+
+read 전체책데이터확인, 상세데이터확인
+select * from bookdata
+select * from bookdata where title=?

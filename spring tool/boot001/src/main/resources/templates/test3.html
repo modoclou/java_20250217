@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org"
+				xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+				layout:decorate="~{fragments/layout}"
+		 > <!-- layout:decorate="~{fragments/layout}"	fragments 폴더 안에 layout 렌더링 -->
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<!-- layout.html	<th:block layout:fragment="content"/> -->
+	<div layout:fragment="content">
+	<div class="container p-5 my-5 border">main content</div>
+	</div>
+</body>
+</html>
+<!-- localhost:8181/boot1/test3 호출 -->
+<!-- http://localhost:8181/boot001/test3 호출 -->

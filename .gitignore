@@ -1430,3 +1430,25 @@ SPRING/boot_board1/.gitignore
 SPRING/boot_board1/mvnw
 SPRING/boot_board1/mvnw.cmd
 SPRING/boot_board1/.mvn/wrapper/maven-wrapper.properties
+spring tool/.gitignore
+spring tool/.project
+spring tool/boot001/.gitattributes
+spring tool/boot001/.gitignore
+spring tool/boot001/mvnw
+spring tool/boot001/mvnw.cmd
+spring tool/boot001/.mvn/wrapper/maven-wrapper.properties
+spring tool/boot008_api/.gitattributes
+spring tool/boot008_api/.gitignore
+spring tool/boot008_api/mvnw
+spring tool/boot008_api/mvnw.cmd
+spring tool/boot008_api/.mvn/wrapper/maven-wrapper.properties
+spring tool/boot009_jpa_n_n/.gitattributes
+spring tool/boot009_jpa_n_n/.gitignore
+spring tool/boot009_jpa_n_n/mvnw
+spring tool/boot009_jpa_n_n/mvnw.cmd
+spring tool/boot009_jpa_n_n/.mvn/wrapper/maven-wrapper.properties
+spring tool/boot1_liked/.gitattributes
+spring tool/boot1_liked/.gitignore
+spring tool/boot1_liked/mvnw
+spring tool/boot1_liked/mvnw.cmd
+spring tool/boot1_liked/.mvn/wrapper/maven-wrapper.properties
