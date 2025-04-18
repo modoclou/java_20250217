@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko"	xmlns:th="http://www.thymeleaf.org" 
+				xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+				layout:decorate="~{fragments/layout}"
+				xmlns:sec="http://www.thymeleaf.org/extras/spring-security">	<!-- ##1 -->
+<head>
+<meta charset="UTF-8">
+<title>Login</title>
+</head>
+<body>
+	<div class="p-5" layout:fragment="content">
+		<div class="container p-5 my-3 border">
+			<h3 th:text="Mypage">Main Content</h3>
+			<div class="alert alert-info" sec:authorize="hasRole('ADMIN')">Admin Role</div> <!-- 인가: 권한(authorize) 있는지(hasRole) -->
+			<div class="alert alert-info" sec:authorize="hasRole('MEMBER')">Member Role</div>
+			<hr/>
+			<div class="alert alert-info" sec:authentication="principal"></div> <!-- 인증: 신원 확인 sec:authoentication -->
+			<div class="alert alert-info" sec:authentication="principal"></div>
+			<div class="alert alert-info" sec:authentication="principal.authorities"></div>
+			<div class="alert alert-info" sec:authentication="principal.username"></div>
+		</div>
+	</div>
+</body>
+</html>

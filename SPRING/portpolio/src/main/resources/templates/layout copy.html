@@ -38,24 +38,24 @@
 </head>
 <body>
 <div layout:fragment="content">
-	<div class="container my-5">
+	<div class="container p-4 my-5">
 		<h3 style="font-weight: bold;">리뷰</h3>
 		<table class="table table-striped  table-bordered table-hover text-center">
-
+			<caption>수정사항: 텍스트 수평 중앙 정렬, 검색바(요소) 오른쪽 정렬</caption>
 			<!-- 회원탈퇴하기?
 			<caption style="text-align: right;">MULTIBOARD-LIST</caption> -->
 
 			<!-- 입력한 데이터 구분용, 디자인 구현 시 시간 남으면 없앨 것 -->
 			<div style="display: flex; margin-right: 0px; width: 25%">
-							<input class="form-control me-2" type="text" placeholder="Search">
-							<button class="btn" type="button" style="color: white; background-color: #889F69 !important; padding: 8px 20px;">Search</button>
-			</nav>
+				<input class="form-control me-2" type="text" placeholder="Search">
+				<button class="btn" type="button" style="color: white; background-color: #889F69 !important; padding: 8px 20px;">Search</button>
+			</div>
 			<thead>
 				<tr style="margin: 0 auto;">
 					<th scope="col">NO</th>
 					<th scope="col">IMAGE</th>
 					<th scope="col" style="text-align: left;">
-						<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+						<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"/>
 						<div class="col-md-6">
 								<div class="rating-card">
 										<div class="star-rating animated-stars">
@@ -72,6 +72,7 @@
 										</div>
 								</div>
 						</div>
+						<!-- 제목 영역. 데이터 영역 구분용으로, 나중에 지웁니다 -->
 						<p>[TITLE] NINKNAME	WRITER</p>
 						<p style="color:#7a7a7a">REVIEW CONTENT</p></th>
 					<th scope="col">DATETIME</th>
@@ -82,12 +83,14 @@
 					<!-- 1. th:each="한개, 상태      : 리스트	 " -->
 					<!-- 2. th:text="동적으로꺼내온데이터"           -->
 					<!-- 3. th:href="@{/board/insert}"          -->
-				<tr    th:each="dto, state : ${list}">
-					<td  th:text="${list.size() - state.index}" ></td>  <!-- 3-0, 3-1 , 3-2 -->
-					<td><a th:href="@{|/board/detail/${dto.id}|}"    th:text="${dto.btitle}"></a></td>
-					<td  th:text="${dto.member.name}"></td>
-					<td  th:text="${#temporals.format( dto.createDate ,'yyyy-MM-dd HH:mm'  )   }" ></td>
-					<td  th:text="${dto.bhit}"       ></td>
+					<tr th:each="dto, state : ${list}">
+					<td th:text="${list.size() - state.index}" ></td>  <!-- 3-0, 3-1, 3-2 -->
+					<td><img th:src="${image}" alt="Image to Bookcover"/></td>
+					<td th:text="${id}"></td> <!-- 게시글넘버 -->
+					<td><a th:href="@{|/naver/books/${리뷰링크...}|}" th:text="${title} ${리뷰제목} ${author}"></a></td>
+					<td th:text="${리뷰내용}"></td>
+					<td th:text="${like}"></td>
+					<!-- <td  th:text="${#temporals.format( dto.createDate ,'yyyy-MM-dd HH:mm'  )   }" ></td> -->
 				</tr> 
 			</tbody>
 		</table>

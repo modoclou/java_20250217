@@ -1,0 +1,55 @@
+:: PORTPOLIO
+1. ERD	2025-04-10~11
+2. 스토리보드 (각자 파트) Figma	0411
+3. GIT HUB - 개발설정	0414
+4. 
+5. 
+6. api - 0417-18	각 파트 개발
+ * 네이버 개발자
+ * 스케줄러
+ * mail
+
+ * ajax
+ * kakao login
+1. https://developers.kakao.com/
+애플리케이션 만들고 / 로그인 활성화 / 동의 항목
+	redirect uri : http://localhost:8080/kakao
+	rest api : a928f88c4f179eaa843da943d720cedc
+
+2. 스프링부트 프로젝트
+2-1. pom.xml
+      <dependency>
+         <groupId>com.google.code.gson</groupId>
+         <artifactId>gson</artifactId>
+         <!-- <version>2.8.2</version> -->
+      </dependency>
+
+2-2. application.properties (등록)
+	redirect uri : http://localhost:8080/kakao
+	rest api : a928f88c4f179eaa843da943d720cedc
+
+3. 코드구현
+	3-1. 카카오로그인
+	https://kauth.kakao.com/oauth/authorize?response_type=code&client_id=${REST_API_KEY}&redirect_uri=${REDIRECT_URI}
+
+	3-2. 인가코드
+	토큰 받기(Post방식)
+	https://kauth.kakao.com/oauth/token
+> 헤더
+Content-Type	Content-Type: application/x-www-form-urlencoded;charset=utf-8
+> 본문
+grant_type:	String authorization_code로 고정
+client_id:		String 앱 REST API 키
+		[내 애플리케이션] > [앱 키]에서 확인 가능
+redirect_uri:	String	인가 코드가 리다이렉트된 URI
+code:		String	받은 코드(인가 코드 받기 요청으로 얻은 인가 코드)
+
+curl -v -X POST "https://kauth.kakao.com/oauth/token" \
+    -H "Content-Type: application/x-www-form-urlencoded;charset=utf-8" \
+    -d "grant_type=authorization_code" \
+    -d "client_id=${REST_API_KEY}" \
+    --data-urlencode "redirect_uri=${REDIRECT_URI}" \
+    -d "code=${AUTHORIZE_CODE}"
+
+......STEP3btGNm1AdQ0L__ZUrmBiiC8edjhEg9j8zAAAAAQoXC9cAAAGWRwHtJc2yTeNnt1bO
+......{"id":4221833269,"connected_at":"2025-04-18T03:03:34Z","properties":{"nickname":"예진","profile_image":"http://k.kakaocdn.net/dn/bUxwug/btsNf9bUpiw/bFtM8eIShO1O6UWoxXjSa0/img_640x640.jpg","thumbnail_image":"http://k.kakaocdn.net/dn/bUxwug/btsNf9bUpiw/bFtM8eIShO1O6UWoxXjSa0/img_110x110.jpg"},"kakao_account":{"profile_nickname_needs_agreement":false,"profile_image_needs_agreement":false,"profile":{"nickname":"예진","thumbnail_image_url":"http://k.kakaocdn.net/dn/bUxwug/btsNf9bUpiw/bFtM8eIShO1O6UWoxXjSa0/img_110x110.jpg","profile_image_url":"http://k.kakaocdn.net/dn/bUxwug/btsNf9bUpiw/bFtM8eIShO1O6UWoxXjSa0/img_640x640.jpg","is_default_image":false,"is_default_nickname":false}}}

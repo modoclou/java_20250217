@@ -21,8 +21,8 @@ public class NaverBook { //중간에 DB 필요하면 Service 만들기
 	HttpURLConnection conn = (HttpURLConnection)url.openConnection();
 	
 	//2. 옵션 
-	conn.setRequestProperty("X-Naver-Client-Id", cliendId);
-	conn.setRequestProperty("X-Naver-Client-Secret", cliendSecret);
+	conn.setRequestProperty("reu63fdeQl8IXmwLVsRM", cliendId);
+	conn.setRequestProperty("AvEnm8FcX2", cliendSecret);
 	conn.setDoInput(true);
 	conn.setDoOutput(true);
 	conn.setRequestMethod("GET"); //##

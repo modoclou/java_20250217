@@ -16,8 +16,8 @@ import com.gunr.board.NaverBook;
 @Controller
 public class BookController {
 	@Autowired NaverBook api;
-	String clientId = "ECGnyVl0cYNSGGz2T4yQ"; 		
-	String clientSecret = "ypWbpX4tos";
+	String clientId = "reu63fdeQl8IXmwLVsRM"; 		
+	String clientSecret = "AvEnm8FcX2";
 
 	@GetMapping("/book/list")
 	public String booklist() { return "/book/list"; }

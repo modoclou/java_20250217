@@ -4,3 +4,35 @@
 1) 팀장- git repository  /  프로젝트 올리기 / 팀원 초대
 2) 팀원- 프로젝트 내려받기 /  branch 만들기 (각자작업)
 3) 코드올린거 체크하고 project에 반영여부
+
+[ADMIN]
+
+**create** 책 데이터 등록
+insert into bookdata (title, link, image, author, discount, publisher, pubdate, isbn, description) values (?, ?, ?, ?, ?, ?, ?, ?, ?)
+
+**read** 전체 책 데이터 확인, 상세 데이터 확인
+전체 데이터 확인만 할 때 - select * from bookdata
+
+특정 제목의 책들을 조회할 때 - select * from bookdata where title=?
+select * from bookdata where title=? and publisher=?
+
+**delete** 책 데이터 삭제
+delete from bookdata where title=? and publisher=?
+
+[USER]
+
+X
+
+**read** 전체 책 데이터 확인, 상세 데이터 확인
+특정 제목의 책들을 조회할 때 - select * from bookdata where title=? and publisher=?
+
+X
+
+X
+
+
+select title, author, publisher, description from bookdata where title like '%검색어%' or author like '%검색어%' or publisher like '%검색어%' or description  like '%검색어%'
+
+
+뽑아올 데이터 참고용
+http://localhost:8080/naver/booksapi/%EB%8D%B0%EB%AF%B8%EC%95%88
